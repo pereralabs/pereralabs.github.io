@@ -74,11 +74,13 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 16, 28, 0.48);
-  backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
-  border-bottom: 1px solid rgba(155, 184, 208, 0.18);
-  box-shadow: 0 8px 32px rgba(2, 6, 23, 0.42);
+  background: linear-gradient(135deg, rgba(22, 36, 54, 0.72), rgba(8, 14, 24, 0.34));
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  backdrop-filter: blur(30px) saturate(180%);
+  border-bottom: 1px solid rgba(219, 228, 238, 0.24);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 8px 32px rgba(2, 6, 23, 0.42);
 }
 
 .nav-wrap::after {
@@ -176,11 +178,12 @@ a {
 
 .hero {
   min-height: calc(100vh - 78px);
+  padding-top: 32px;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  grid-template-columns: minmax(0, 1fr) minmax(460px, 0.9fr);
   gap: 48px;
   align-items: center;
 }
@@ -353,10 +356,18 @@ h1 .accent-steel {
 }
 
 .logo-showcase {
-  justify-self: end;
-  width: min(100%, 430px);
+  align-self: start;
+  justify-self: center;
+  width: min(100%, 520px);
   text-align: center;
 }
+
+.logo-showcase .buttons {
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
 
 /* Transparent Frosted Glass Cards with Tri-Color Specular Rim */
 .logo-frame,
@@ -454,6 +465,148 @@ h1 .accent-steel {
   border-radius: 14px;
 }
 
+.about-logo-frame {
+  perspective: 900px;
+}
+
+.logo-frame .main-logo-image {
+  position: relative;
+  z-index: 0;
+}
+
+.logo-icon-spin {
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 50%;
+  width: 58%;
+  aspect-ratio: 1.48;
+  transform: translateX(-50%);
+  transform-style: preserve-3d;
+  animation: logo-icon-spin 6s linear infinite;
+  pointer-events: none;
+}
+
+.logo-frame .logo-icon-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  backface-visibility: hidden;
+}
+
+.logo-frame .logo-icon-back {
+  transform: rotateY(180deg);
+}
+
+.about-logo-frame {
+  container-type: inline-size;
+}
+
+.logo-tagline {
+  position: absolute;
+  z-index: 2;
+  top: 80%;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.22em;
+  white-space: nowrap;
+  font: 800 clamp(11px, 4.7cqw, 23px)/1.2 Inter, system-ui, sans-serif;
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.16), 0 2px 4px rgba(0, 0, 0, 0.78);
+  pointer-events: none;
+}
+
+.logo-tagline-word {
+  opacity: 0;
+  animation: tagline-health 8s linear infinite;
+}
+
+.tagline-health {
+  color: var(--red-main);
+}
+
+.tagline-technology {
+  color: var(--steel-main);
+  animation-name: tagline-technology;
+}
+
+.tagline-innovation {
+  color: var(--green-light);
+  animation-name: tagline-innovation;
+}
+
+.tagline-separator {
+  color: var(--white-silver);
+}
+
+.tagline-separator-first {
+  animation-name: tagline-separator-first;
+}
+
+.tagline-separator-second {
+  animation-name: tagline-separator-second;
+}
+
+@keyframes logo-icon-spin {
+  from {
+    transform: translateX(-50%) rotateY(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotateY(360deg);
+  }
+}
+
+@keyframes tagline-health {
+  0%, 4%, 68%, 76%, 100% {
+    opacity: 0;
+  }
+  8%, 68% {
+    opacity: 1;
+  }
+}
+
+@keyframes tagline-separator-first {
+  0%, 9%, 68%, 76%, 100% {
+    opacity: 0;
+  }
+  13%, 68% {
+    opacity: 1;
+  }
+}
+
+@keyframes tagline-technology {
+  0%, 18%, 68%, 76%, 100% {
+    opacity: 0;
+  }
+  22%, 68% {
+    opacity: 1;
+  }
+}
+
+@keyframes tagline-separator-second {
+  0%, 27%, 68%, 76%, 100% {
+    opacity: 0;
+  }
+  31%, 68% {
+    opacity: 1;
+  }
+}
+
+@keyframes tagline-innovation {
+  0%, 36%, 68%, 76%, 100% {
+    opacity: 0;
+  }
+  40%, 68% {
+    opacity: 1;
+  }
+}
+
 .logo-showcase p {
   font: 700 12px/1.2 'DM Mono', monospace;
   letter-spacing: 0.14em;
@@ -501,6 +654,20 @@ h1 .accent-steel {
   position: relative;
   z-index: 2;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.mission-mark.about-profile {
+  overflow: hidden;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.about-profile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
 }
 
 .mission h2 {
@@ -597,6 +764,88 @@ h1 .accent-steel {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.journey-step {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.mission-about:hover .journey-386,
+.journey-graphic-card:hover .journey-stage-one {
+  animation: journey-start 650ms ease-out both;
+}
+
+.skill-card:hover .skill-graphic svg > :nth-child(2) {
+  animation: journey-start 650ms ease-out both;
+}
+
+.skill-card:hover .skill-graphic svg > :nth-child(n + 3) {
+  animation: journey-reveal 450ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.skill-card:hover .skill-graphic svg > :nth-child(3) { animation-delay: 120ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(4) { animation-delay: 240ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(5) { animation-delay: 360ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(6) { animation-delay: 480ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(7) { animation-delay: 600ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(8) { animation-delay: 720ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(9) { animation-delay: 840ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(10) { animation-delay: 960ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(11) { animation-delay: 1080ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(12) { animation-delay: 1200ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(13) { animation-delay: 1320ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(14) { animation-delay: 1440ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(15) { animation-delay: 1560ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(16) { animation-delay: 1680ms; }
+.skill-card:hover .skill-graphic svg > :nth-child(17) { animation-delay: 1800ms; }
+
+.mission-about:hover .journey-network,
+.mission-about:hover .journey-app,
+.mission-about:hover .journey-shield,
+.journey-graphic-card:hover .journey-stage-two,
+.journey-graphic-card:hover .journey-stage-three {
+  animation: journey-reveal 600ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+.mission-about:hover .journey-network,
+.journey-graphic-card:hover .journey-stage-two {
+  animation-delay: 550ms;
+}
+
+.mission-about:hover .journey-app,
+.journey-graphic-card:hover .journey-stage-three {
+  animation-delay: 1.25s;
+}
+
+.mission-about:hover .journey-shield {
+  animation-delay: 1.95s;
+}
+
+@keyframes journey-start {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  45% {
+    opacity: 1;
+    transform: translateX(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes journey-reveal {
+  from {
+    opacity: 0;
+    transform: translateX(-18px) scale(0.82);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
 
 /* ==========================================================================
@@ -1442,8 +1691,9 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
   .logo-showcase {
-    justify-self: start;
-    width: min(100%, 480px);
+    order: -1;
+    justify-self: center;
+    width: min(100%, 520px);
     margin-top: 8px;
   }
   .skills-grid {
@@ -1494,8 +1744,5 @@ footer a:hover {
   .nav > div a {
     padding: 7px 12px;
     font-size: 13px;
-  }
-  .brand {
-    font-size: 20px;
   }
 }
