@@ -1483,6 +1483,16 @@ h1 .accent-steel {
   justify-content: space-between;
 }
 
+.bento-hero .card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.bento-skycover .bento-title-row {
+  margin-top: 0;
+}
+
 .bento-stack {
   grid-area: stack;
 }
