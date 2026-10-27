@@ -1,0 +1,1501 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Roboto+Slab:wght@700;800;900&display=swap');
+
+:root {
+  --bg: #080e18;
+  --glass-bg: rgba(13, 21, 35, 0.50);
+  --glass-bg-hover: rgba(17, 28, 46, 0.64);
+  --glass-sub: rgba(13, 21, 35, 0.38);
+  --glass-border: rgba(155, 184, 208, 0.26);
+  --glass-highlight: rgba(255, 255, 255, 0.26);
+  --line: rgba(155, 184, 208, 0.22);
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+
+  /* Logo Heading Palette: Blue-Steel (PERERA) & Crimson Red (LABS) */
+  --steel-light: #9bb8d0;
+  --steel-main: #6485a0;
+  --steel-mid: #537388;
+  --steel-dark: #364d63;
+
+  /* Logo Tri-Color Palette: Red (Health) · White (Technology) · Green (Innovation / Leaf) */
+  --red-light: #df564e;
+  --red-main: #b83832;
+  --red-dark: #5c1814;
+
+  --white-pure: #f8fafc;
+  --white-silver: #dbe4ee;
+
+  --green-light: #9fc28c;
+  --green-main: #73a156;
+  --green-bright: #83b867;
+  --green-dark: #365826;
+
+  /* Tri-Color Gradients (Red · White · Green) */
+  --tri-border-gradient: linear-gradient(90deg, transparent 2%, var(--red-light) 20%, var(--white-pure) 50%, var(--green-bright) 80%, transparent 98%);
+  --tri-subtle-bg: linear-gradient(135deg, rgba(184, 56, 50, 0.20) 0%, rgba(248, 250, 252, 0.10) 50%, rgba(115, 161, 86, 0.24) 100%);
+  --tri-button-primary: linear-gradient(135deg, rgba(83, 115, 136, 0.88) 0%, rgba(115, 161, 86, 0.88) 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(180deg, rgba(8, 14, 24, 0.64) 0%, rgba(10, 17, 29, 0.78) 50%, rgba(8, 14, 24, 0.90) 100%),
+    radial-gradient(circle at 15% 15%, rgba(184, 56, 50, 0.18) 0%, transparent 42%),
+    radial-gradient(circle at 50% 12%, rgba(100, 133, 160, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 85% 18%, rgba(115, 161, 86, 0.22) 0%, transparent 44%),
+    url('assets/bg_tab_shade.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.22s ease;
+}
+
+/* Frosted Glass Top Navigation Bar with Tri-Color (Red · White · Green) Bottom Line */
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 16, 28, 0.48);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border-bottom: 1px solid rgba(155, 184, 208, 0.18);
+  box-shadow: 0 8px 32px rgba(2, 6, 23, 0.42);
+}
+
+.nav-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--tri-border-gradient);
+  opacity: 0.9;
+}
+
+.nav {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.nav > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav > div a {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.nav > div a:hover {
+  color: var(--white-pure);
+  background: rgba(155, 184, 208, 0.14);
+  border-color: rgba(159, 194, 140, 0.35);
+}
+
+.nav > div a.active {
+  color: var(--white-pure);
+  background: var(--tri-subtle-bg);
+  border-color: rgba(159, 194, 140, 0.52);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    0 4px 16px rgba(115, 161, 86, 0.22);
+}
+
+/* ==========================================================================
+   Top Navbar PERERA LABS Heading (Logo-Matched Blue-Steel + Crimson Red)
+   ========================================================================== */
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: 'Roboto Slab', 'Alfa Slab One', 'Rockwell', Georgia, serif;
+  font-weight: 900;
+  font-size: 25px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.brand .perera-steel {
+  color: var(--steel-light);
+  background: linear-gradient(180deg, #b8d0e4 0%, #7494ae 48%, #4d6a82 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.8px rgba(184, 208, 228, 0.55);
+  filter: drop-shadow(0 2px 0 #263849) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.65));
+}
+
+.brand .labs-red {
+  color: var(--red-light);
+  background: linear-gradient(180deg, #ec6860 0%, #b83832 48%, #7a201b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.8px rgba(236, 104, 96, 0.55);
+  filter: drop-shadow(0 2px 0 #42110e) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.65));
+}
+
+.hero,
+.page {
+  max-width: 1140px;
+  margin: auto;
+  padding: 72px 24px 84px;
+}
+
+.hero {
+  min-height: calc(100vh - 78px);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.intro {
+  max-width: 900px;
+}
+
+/* Tri-Color Eyebrows & Tags (Red · White · Green) */
+.eyebrow,
+.tag {
+  font: 600 12px/1.3 'DM Mono', monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white-silver);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tri-red {
+  color: var(--red-light) !important;
+  -webkit-text-fill-color: var(--red-light) !important;
+}
+
+.tri-white {
+  color: var(--white-pure) !important;
+  -webkit-text-fill-color: var(--white-pure) !important;
+}
+
+.tri-green {
+  color: var(--green-light) !important;
+  -webkit-text-fill-color: var(--green-light) !important;
+}
+
+.tri-steel {
+  color: var(--steel-light) !important;
+  -webkit-text-fill-color: var(--steel-light) !important;
+}
+
+.tri-sep {
+  color: var(--steel-main);
+  opacity: 0.75;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.badge-pill {
+  font: 600 11px/1 'DM Mono', monospace;
+  letter-spacing: 0.06em;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(115, 161, 86, 0.22);
+  border: 1px solid rgba(159, 194, 140, 0.55);
+  color: var(--green-light);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  font-size: clamp(38px, 5.8vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  margin: 14px 0 22px;
+  color: var(--white-pure);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Tri-Color Words inside H1 */
+h1 .accent-red {
+  color: var(--red-light);
+}
+
+h1 .accent-white {
+  color: var(--white-pure);
+}
+
+h1 .accent-green {
+  color: var(--green-light);
+}
+
+h1 .accent-steel {
+  color: var(--steel-light);
+}
+
+.lead {
+  font-size: 18.5px;
+  color: var(--muted);
+  max-width: 780px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+/* Frosted Glass Pill Buttons with Tri-Color Accents */
+.button,
+.pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(155, 184, 208, 0.34);
+  background: rgba(15, 24, 40, 0.62);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  color: var(--white-pure);
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 8px 20px rgba(2, 6, 23, 0.38);
+  cursor: pointer;
+}
+
+.button:hover,
+.pill-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--green-light);
+  background: rgba(22, 36, 58, 0.78);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 12px 28px rgba(2, 6, 23, 0.55),
+    0 0 18px rgba(131, 184, 103, 0.28);
+}
+
+/* Primary Leaf-Green & Steel Button */
+.button.primary,
+.pill-link.primary {
+  background: linear-gradient(135deg, rgba(115, 161, 86, 0.88) 0%, rgba(78, 128, 56, 0.90) 100%);
+  border-color: rgba(159, 194, 140, 0.72);
+  color: #ffffff !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    0 10px 26px rgba(115, 161, 86, 0.34);
+}
+
+.button.primary:hover,
+.pill-link.primary:hover {
+  background: linear-gradient(135deg, rgba(131, 184, 103, 0.96) 0%, rgba(92, 145, 66, 0.96) 100%);
+  border-color: #c0e2b0;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 14px 32px rgba(115, 161, 86, 0.48);
+}
+
+/* Blue-Steel / Red Accent Button */
+.button.apk-download,
+.pill-link.apk-download {
+  background: linear-gradient(135deg, rgba(100, 133, 160, 0.38), rgba(184, 56, 50, 0.34));
+  border-color: rgba(155, 184, 208, 0.52);
+  color: var(--white-pure) !important;
+}
+
+.button.apk-download:hover,
+.pill-link.apk-download:hover {
+  background: linear-gradient(135deg, rgba(100, 133, 160, 0.52), rgba(184, 56, 50, 0.48));
+  border-color: var(--red-light);
+}
+
+.logo-showcase {
+  justify-self: end;
+  width: min(100%, 430px);
+  text-align: center;
+}
+
+/* Transparent Frosted Glass Cards with Tri-Color Specular Rim */
+.logo-frame,
+.mission,
+.card,
+.app-card,
+.skill-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--glass-bg);
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  box-shadow:
+    inset 0 1px 0 var(--glass-highlight),
+    inset 0 0 24px rgba(115, 161, 86, 0.05),
+    0 20px 50px rgba(2, 6, 23, 0.54);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+}
+
+.card:hover,
+.app-card:hover,
+.mission:hover,
+.logo-frame:hover,
+.skill-card:hover {
+  transform: translateY(-4px);
+  background: var(--glass-bg-hover);
+  border-color: rgba(159, 194, 140, 0.52);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    -10px 20px 45px rgba(184, 56, 50, 0.14),
+    0 20px 45px rgba(248, 250, 252, 0.06),
+    10px 20px 45px rgba(115, 161, 86, 0.20);
+}
+
+/* Tri-Color Top Specular Reflection Bar on Every Card (Red -> White -> Green) */
+.card::before,
+.app-card::before,
+.mission::before,
+.logo-frame::before,
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: var(--tri-border-gradient);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Card Background Graphic Layer (shining through frosted glass) */
+.card-bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.34;
+  transition: opacity 0.35s ease, transform 0.5s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.card:hover .card-bg-layer,
+.app-card:hover .card-bg-layer,
+.mission:hover .card-bg-layer,
+.skill-card:hover .card-bg-layer {
+  opacity: 0.46;
+  transform: scale(1.03);
+}
+
+.card-bg-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(10, 18, 30, 0.64) 0%, rgba(15, 25, 40, 0.44) 50%, rgba(12, 24, 20, 0.62) 100%);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.logo-frame {
+  padding: 12px;
+}
+
+.logo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.logo-showcase p {
+  font: 700 12px/1.2 'DM Mono', monospace;
+  letter-spacing: 0.14em;
+  color: var(--text);
+  margin: 14px 0 0;
+}
+
+.logo-showcase .motto-health {
+  color: var(--red-light);
+}
+
+.logo-showcase .motto-tech {
+  color: var(--white-pure);
+}
+
+.logo-showcase .motto-innov {
+  color: var(--green-light);
+}
+
+.logo-showcase p span.sep {
+  color: var(--steel-main);
+  padding: 0 5px;
+}
+
+.mission {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 24px;
+  align-items: start;
+  max-width: 1140px;
+  margin: 72px 0 28px;
+  padding: 36px;
+}
+
+.mission-mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: var(--tri-subtle-bg);
+  border: 1px solid rgba(159, 194, 140, 0.45);
+  font-size: 28px;
+  color: var(--green-light);
+  position: relative;
+  z-index: 2;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.mission h2 {
+  font-size: clamp(24px, 3.2vw, 32px);
+  line-height: 1.2;
+  margin: 8px 0 14px;
+  letter-spacing: -0.03em;
+}
+
+.mission p:not(.eyebrow) {
+  color: var(--muted);
+  margin: 0;
+  font-size: 16px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 30px;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+/* Tri-Color Icon Badges (Red · White · Green · Steel) */
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--tri-subtle-bg);
+  border: 1px solid rgba(159, 194, 140, 0.38);
+  font-size: 22px;
+  color: var(--green-light);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.card:nth-child(1) .icon {
+  color: var(--green-light);
+  border-color: rgba(159, 194, 140, 0.45);
+}
+
+.card:nth-child(2) .icon {
+  color: var(--white-pure);
+  border-color: rgba(248, 250, 252, 0.38);
+}
+
+.card:nth-child(3) .icon {
+  color: var(--steel-light);
+  border-color: rgba(155, 184, 208, 0.45);
+}
+
+.card:nth-child(4) .icon {
+  color: var(--red-light);
+  border-color: rgba(223, 86, 78, 0.45);
+}
+
+.card h2 {
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.card p,
+.app-info p {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Graphic Banner inside Frosted Glass Cards */
+.card-graphic-banner {
+  width: 100%;
+  height: 112px;
+  margin: 16px 0 6px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(155, 184, 208, 0.22);
+  background: rgba(10, 17, 28, 0.58);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.card-graphic-banner svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   Skills Section (#skills) — 3-Column Frosted Glass Grid (Tri-Color Accents)
+   ========================================================================== */
+.skills-section {
+  margin-top: 68px;
+  scroll-margin-top: 96px;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--white-pure);
+}
+
+.section-heading p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  max-width: 64ch;
+  font-size: 16.5px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skill-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  display: inline-grid;
+  place-items: center;
+  background: var(--tri-subtle-bg);
+  border: 1px solid rgba(159, 194, 140, 0.42);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  color: var(--white-pure);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 8px 18px rgba(0, 0, 0, 0.32);
+}
+
+/* Cycle Tri-Color Icon Accents Across Skill Cards (Red · White · Green) */
+.skill-card:nth-child(3n+1) .skill-icon {
+  color: var(--red-light);
+  border-color: rgba(223, 86, 78, 0.48);
+  background: linear-gradient(135deg, rgba(184, 56, 50, 0.26) 0%, rgba(15, 24, 40, 0.65) 100%);
+}
+
+.skill-card:nth-child(3n+2) .skill-icon {
+  color: var(--white-pure);
+  border-color: rgba(248, 250, 252, 0.42);
+  background: linear-gradient(135deg, rgba(155, 184, 208, 0.28) 0%, rgba(15, 24, 40, 0.65) 100%);
+}
+
+.skill-card:nth-child(3n+3) .skill-icon {
+  color: var(--green-light);
+  border-color: rgba(159, 194, 140, 0.50);
+  background: linear-gradient(135deg, rgba(115, 161, 86, 0.28) 0%, rgba(15, 24, 40, 0.65) 100%);
+}
+
+.skill-card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--white-pure);
+}
+
+.skill-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.skill-graphic {
+  width: 100%;
+  height: 66px;
+  margin-top: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(155, 184, 208, 0.20);
+  background: rgba(10, 17, 28, 0.54);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.skill-graphic svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.page-head {
+  max-width: 840px;
+  margin-bottom: 48px;
+}
+
+.page-head h1 {
+  font-size: clamp(36px, 5.2vw, 60px);
+  margin-bottom: 16px;
+}
+
+.portfolio-section {
+  max-width: 1060px;
+  margin-bottom: 64px;
+  scroll-margin-top: 96px;
+}
+
+.portfolio-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(155, 184, 208, 0.24);
+  position: relative;
+}
+
+.portfolio-section-header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 240px;
+  height: 2px;
+  background: var(--tri-border-gradient);
+}
+
+.portfolio-section-header h2 {
+  margin: 6px 0 6px;
+  font-size: clamp(26px, 3.6vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--white-pure);
+}
+
+.portfolio-section-header p:not(.eyebrow) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 680px;
+}
+
+.apps {
+  display: grid;
+  gap: 24px;
+  max-width: 1060px;
+}
+
+.app-card {
+  padding: 32px;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.app-card.featured-skycover {
+  border-color: rgba(159, 194, 140, 0.48);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    -12px 24px 55px rgba(184, 56, 50, 0.16),
+    12px 24px 55px rgba(115, 161, 86, 0.22);
+}
+
+.app-icon {
+  width: 84px;
+  height: 84px;
+  flex: 0 0 84px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  background: var(--tri-subtle-bg);
+  border: 1px solid rgba(159, 194, 140, 0.42);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 12px 28px rgba(0, 0, 0, 0.45);
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--green-light);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.app-card:nth-child(2) .app-icon {
+  color: var(--white-pure);
+  border-color: rgba(248, 250, 252, 0.42);
+}
+
+.app-card:nth-child(3) .app-icon {
+  color: var(--green-light);
+  border-color: rgba(159, 194, 140, 0.45);
+}
+
+.app-card:nth-child(4) .app-icon {
+  color: var(--red-light);
+  border-color: rgba(223, 86, 78, 0.45);
+}
+
+.app-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.app-info {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.app-info h2 {
+  font-size: 30px;
+  line-height: 1.15;
+  margin: 6px 0 10px;
+  color: #ffffff;
+}
+
+.app-info ul {
+  color: var(--muted);
+  padding-left: 0;
+  list-style: none;
+  margin: 16px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px 18px;
+}
+
+.app-info li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14.5px;
+  color: #e2e8f0;
+}
+
+/* Tri-Color Bullet Stars (Red · White · Green) */
+.app-info li:nth-child(3n+1)::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--red-light);
+  font-size: 12px;
+}
+
+.app-info li:nth-child(3n+2)::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--white-pure);
+  font-size: 12px;
+}
+
+.app-info li:nth-child(3n+3)::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--green-light);
+  font-size: 12px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+/* ==========================================================================
+   High-Impact Bento Grid Architecture & Interactive Device Mockups
+   ========================================================================== */
+.bento-app-wrapper {
+  margin-bottom: 52px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  grid-template-areas:
+    "hero stack"
+    "hero release"
+    "arch arch";
+  gap: 18px;
+  max-width: 1100px;
+}
+
+.bento-grid.compact-bento {
+  grid-template-areas:
+    "hero stack"
+    "hero release"
+    "arch arch";
+}
+
+.bento-box {
+  position: relative;
+  overflow: hidden;
+  background: var(--glass-bg);
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
+  border: 1px solid var(--glass-border);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow:
+    inset 0 1px 0 var(--glass-highlight),
+    inset 0 0 24px rgba(115, 161, 86, 0.05),
+    0 20px 50px rgba(2, 6, 23, 0.54);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.bento-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: var(--tri-border-gradient);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.bento-box:hover {
+  border-color: rgba(159, 194, 140, 0.52);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    -8px 18px 40px rgba(184, 56, 50, 0.13),
+    8px 18px 40px rgba(115, 161, 86, 0.18);
+}
+
+.bento-hero {
+  grid-area: hero;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bento-stack {
+  grid-area: stack;
+}
+
+.bento-release {
+  grid-area: release;
+}
+
+.bento-arch {
+  grid-area: arch;
+}
+
+.bento-label {
+  font: 700 11px/1.2 'DM Mono', monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel-light);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.bento-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 8px 0 12px;
+}
+
+.bento-title-row .app-icon {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 18px;
+  font-size: 28px;
+}
+
+.bento-title-row h3 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.12;
+  color: var(--white-pure);
+}
+
+.bento-title-row p.sub {
+  margin: 4px 0 0;
+  font-size: 13.5px;
+  color: var(--green-light);
+  font-family: 'DM Mono', monospace;
+}
+
+/* ==========================================================================
+   Side-by-Side Interactive Device Mockups (Flat-Edge Phone + Circular Watch)
+   ========================================================================== */
+.device-stage {
+  position: relative;
+  z-index: 2;
+  margin: 18px 0 16px;
+  padding: 24px 18px;
+  border-radius: 18px;
+  background: radial-gradient(circle at 50% 50%, rgba(100, 133, 160, 0.18) 0%, rgba(8, 14, 24, 0.78) 100%);
+  border: 1px solid rgba(155, 184, 208, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Realistic Flat-Edge Android Phone Shell with Hole-Punch Camera */
+.phone-mockup {
+  position: relative;
+  width: 232px;
+  height: 456px;
+  border-radius: 34px;
+  padding: 10px;
+  background: linear-gradient(145deg, #2b3d52 0%, #141f2e 50%, #243548 100%);
+  border: 2px solid rgba(184, 208, 228, 0.52);
+  box-shadow:
+    inset 0 0 0 2px #090f18,
+    0 24px 50px rgba(0, 0, 0, 0.72),
+    -6px 0 24px rgba(184, 56, 50, 0.16),
+    6px 0 24px rgba(115, 161, 86, 0.20);
+  flex-shrink: 0;
+}
+
+/* Side Power & Volume Hardware Buttons */
+.phone-mockup::before {
+  content: "";
+  position: absolute;
+  right: -4px;
+  top: 96px;
+  width: 3px;
+  height: 54px;
+  background: #7494ae;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 0 72px 0 #df564e;
+}
+
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #070d17;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Centered Hole-Punch Camera */
+.phone-camera-punch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #2a3b4c 0%, #05080e 70%);
+  border: 1.2px solid rgba(155, 184, 208, 0.45);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.phone-screen img,
+.phone-screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+}
+
+/* Bottom Gesture Pill inside Phone Screen */
+.phone-gesture-bar {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.65);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Animated Sync Bridge Between Phone & Watch */
+.sync-bridge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--green-light);
+  font: 600 10px/1.2 'DM Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sync-bridge-line {
+  width: 44px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red-light), var(--white-pure), var(--green-bright));
+  position: relative;
+  border-radius: 999px;
+}
+
+.sync-bridge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-bright);
+  box-shadow: 0 0 10px var(--green-bright);
+  animation: syncPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes syncPulse {
+  0%, 100% { transform: scale(0.9); opacity: 0.7; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+/* Realistic Circular Wear OS Smartwatch Shell */
+.watch-mockup {
+  position: relative;
+  width: 176px;
+  height: 236px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Top & Bottom Watch Straps */
+.watch-strap-top,
+.watch-strap-bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68px;
+  height: 42px;
+  background: linear-gradient(90deg, #152030 0%, #24354a 50%, #152030 100%);
+  border: 1.5px solid rgba(155, 184, 208, 0.36);
+  z-index: 1;
+}
+
+.watch-strap-top {
+  top: 0;
+  border-radius: 12px 12px 4px 4px;
+  background-image: repeating-linear-gradient(180deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 3px, transparent 3px, transparent 8px);
+}
+
+.watch-strap-bottom {
+  bottom: 0;
+  border-radius: 4px 4px 12px 12px;
+  background-image: repeating-linear-gradient(180deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 3px, transparent 3px, transparent 8px);
+}
+
+/* Circular Metallic Watch Case + Rotating Crown */
+.watch-case {
+  position: relative;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  padding: 9px;
+  background: linear-gradient(135deg, #344a63 0%, #152030 55%, #2a3e54 100%);
+  border: 2.5px solid rgba(184, 208, 228, 0.62);
+  box-shadow:
+    inset 0 0 0 2px #080d16,
+    0 18px 40px rgba(0, 0, 0, 0.75),
+    0 0 24px rgba(115, 161, 86, 0.22);
+  z-index: 2;
+}
+
+/* Rotating Crown & Side Button */
+.watch-case::before {
+  content: "";
+  position: absolute;
+  right: -7px;
+  top: 48px;
+  width: 6px;
+  height: 24px;
+  border-radius: 0 4px 4px 0;
+  background: linear-gradient(180deg, #b8d0e4, #537388);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.watch-case::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 84px;
+  width: 4px;
+  height: 16px;
+  border-radius: 0 3px 3px 0;
+  background: var(--red-light);
+}
+
+.watch-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #111f33 0%, #050911 85%);
+  border: 1px solid rgba(159, 194, 140, 0.35);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  position: relative;
+}
+
+.watch-screen svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Interactive Screen Switcher Pills under Phone + Watch Stage */
+.screen-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 6px 0 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.screen-tab {
+  font: 600 11.5px/1 'DM Mono', monospace;
+  padding: 8px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(155, 184, 208, 0.32);
+  background: rgba(12, 20, 34, 0.72);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.screen-tab:hover {
+  color: var(--white-pure);
+  border-color: var(--green-light);
+}
+
+.screen-tab.active {
+  background: var(--tri-subtle-bg);
+  color: var(--white-pure);
+  border-color: var(--green-light);
+  box-shadow: 0 4px 14px rgba(115, 161, 86, 0.25);
+}
+
+/* Tech Stack Badges inside Box 2 */
+.tech-badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tech-badge {
+  font: 600 12px/1.2 'DM Mono', monospace;
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: rgba(10, 17, 29, 0.65);
+  border: 1px solid rgba(155, 184, 208, 0.28);
+  color: var(--white-pure);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tech-badge:nth-child(3n+1) {
+  border-color: rgba(223, 86, 78, 0.45);
+  color: #fca5a5;
+}
+
+.tech-badge:nth-child(3n+2) {
+  border-color: rgba(248, 250, 252, 0.38);
+  color: var(--white-pure);
+}
+
+.tech-badge:nth-child(3n+3) {
+  border-color: rgba(159, 194, 140, 0.48);
+  color: var(--green-light);
+}
+
+.stack-meta-list {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.stack-meta-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 11px;
+  border-radius: 10px;
+  background: rgba(8, 14, 24, 0.48);
+  border: 1px solid rgba(155, 184, 208, 0.16);
+}
+
+.stack-meta-row strong {
+  color: var(--white-pure);
+  font-family: 'DM Mono', monospace;
+  font-size: 12.5px;
+}
+
+/* Release Verification Pill & Live Pulsing Dot inside Box 3 */
+.release-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(20, 42, 30, 0.72);
+  border: 1px solid rgba(131, 184, 103, 0.62);
+  color: #dcfce7;
+  font: 600 12px/1 'DM Mono', monospace;
+  letter-spacing: 0.04em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 6px 18px rgba(115, 161, 86, 0.22);
+  margin: 8px 0 14px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 10px #4ade80, 0 0 20px #22c55e;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.28); opacity: 0.72; }
+}
+
+.sha-box {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(6, 11, 20, 0.78);
+  border: 1px solid rgba(155, 184, 208, 0.22);
+  font: 500 11px/1.45 'DM Mono', monospace;
+  color: var(--steel-light);
+  word-break: break-all;
+}
+
+.sha-box span.sha-label {
+  color: var(--green-light);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* Architecture Code Snippet Box inside Box 4 */
+.arch-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.arch-code {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: rgba(6, 11, 20, 0.84);
+  border: 1px solid rgba(155, 184, 208, 0.26);
+  font: 500 12.5px/1.55 'DM Mono', monospace;
+  color: #e2e8f0;
+  overflow-x: auto;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.arch-code .kw { color: var(--red-light); font-weight: 600; }
+.arch-code .fn { color: var(--green-light); }
+.arch-code .str { color: #fde047; }
+.arch-code .cmt { color: #94a3b8; font-style: italic; }
+.arch-code .typ { color: var(--steel-light); }
+
+footer {
+  max-width: 1140px;
+  margin: 40px auto 0;
+  padding: 28px 24px 48px;
+  border-top: 1px solid rgba(155, 184, 208, 0.20);
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+footer a {
+  color: var(--green-light);
+  font-weight: 700;
+}
+
+footer a:hover {
+  color: var(--white-pure);
+  text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .logo-showcase {
+    justify-self: start;
+    width: min(100%, 480px);
+    margin-top: 8px;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "stack"
+      "release"
+      "arch";
+  }
+  .arch-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero,
+  .page {
+    padding-top: 48px;
+    padding-bottom: 60px;
+  }
+  .profile-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .mission {
+    grid-template-columns: 1fr;
+    padding: 26px;
+    margin-top: 48px;
+  }
+  .app-card {
+    flex-direction: column;
+    padding: 24px;
+    gap: 18px;
+  }
+  .app-info ul {
+    grid-template-columns: 1fr;
+  }
+  .nav {
+    padding: 0 16px;
+  }
+  .nav > div {
+    gap: 4px;
+  }
+  .nav > div a {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+  .brand {
+    font-size: 20px;
+  }
+}

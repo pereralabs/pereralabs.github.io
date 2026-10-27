@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | PERERA LABS — Android &amp; Wear OS Showcases</title>
+  <meta name="description" content="Interactive Android and Wear OS app portfolio by Perera Labs, featuring side-by-side device mockups, Bento grid architecture, and SHA-256 verified releases.">
+  <link rel="icon" type="image/png" href="assets/skycover-logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="nav-wrap">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="perera-steel">PERERA</span><span class="labs-red">LABS</span>
+    </a>
+    <div>
+      <a href="index.html">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a class="active" href="apps.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</div>
+
+<main class="page">
+  <header class="page-head">
+    <p class="eyebrow">
+      <span class="tri-red">HEALTH</span>
+      <span class="tri-sep">|</span>
+      <span class="tri-white">TECHNOLOGY</span>
+      <span class="tri-sep">|</span>
+      <span class="tri-green">INNOVATION</span>
+    </p>
+    <h1>Portfolio built to make <span class="accent-red">everyday</span> <span class="accent-white">life</span> <span class="accent-green">a little better.</span></h1>
+    <p class="lead">Explore interactive Android &amp; Wear OS device showcases, technical architecture highlights, and SHA-256 verified release builds engineered around real-world sensory health, personal safety, and everyday resilience.</p>
+    <div class="buttons" style="margin-top: 24px;">
+      <a class="button primary" href="#android-apps">📱 Android Apps ↓</a>
+      <a class="button apk-download" href="#wearos-apps">⌚ Wear OS Apps ↓</a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       SECTION 1: ANDROID APPS (Phone, Tablet & Chromebook)
+       ======================================================================== -->
+  <section id="android-apps" class="portfolio-section">
+    <div class="portfolio-section-header">
+      <div>
+        <p class="eyebrow">
+          <span class="tri-red">SECTION 01</span>
+          <span class="tri-sep">·</span>
+          <span class="tri-white">MOBILE, TABLET &amp; CHROMEBOOK</span>
+        </p>
+        <h2>📱 Android <span class="tri-green">Apps</span></h2>
+        <p>Full-featured Android applications with interactive multi-device previews, technical stack breakdowns, and signed release feeds.</p>
+      </div>
+      <span class="badge-pill">ANDROID SDK 36 · BILLING 8.0</span>
+    </div>
+
+    <!-- ======================================================================
+         BENTO SHOWCASE 1: SKY COVER (ANDROID + WEAR OS MULTI-DEVICE SYNC)
+         ====================================================================== -->
+    <div class="bento-app-wrapper">
+      <div class="bento-grid">
+
+        <!-- BOX 1 (HERO): Side-by-Side Phone + Wear OS Watch Interactive Preview -->
+        <article class="bento-box bento-hero">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 01</span> · <span class="tri-white">INTERACTIVE MULTI-DEVICE PREVIEW</span></span>
+              <span class="badge-pill">PHONE + WATCH SYNC</span>
+            </div>
+
+            <div class="bento-title-row">
+              <div class="app-icon">
+                <img src="assets/skycover-logo.png" alt="Sky Cover Logo">
+              </div>
+              <div>
+                <h3>Sky Cover</h3>
+                <p class="sub">com.pereralabs.skycover · Sensory Shade, Cloud &amp; Night-Sky Radar</p>
+              </div>
+            </div>
+
+            <p style="color: var(--muted); font-size: 15px; margin: 0;">Designed for people managing migraines, photophobia, glare, and sun sensitivity—as well as photographers, campers, and stargazers. Switch between the live promo video and real app screens inside the flat-edge phone frame below, paired side-by-side with the synced Wear OS watch dial.</p>
+
+            <!-- Side-by-Side Flat-Edge Phone + Circular Wear OS Watch Stage -->
+            <div class="device-stage">
+              <!-- Flat-Edge Android Phone Frame -->
+              <div class="phone-mockup" aria-label="Android Phone Interactive Preview">
+                <div class="phone-screen" id="skycover-phone-screen">
+                  <div class="phone-camera-punch"></div>
+                  <img id="skycover-screen-img" src="assets/01_live_shade_tracker.png" alt="Sky Cover Live Shade Tracker Screen">
+                  <video id="skycover-screen-video" src="assets/sky_cover_play_store_promo.mp4" muted loop playsinline preload="metadata" style="display: none;"></video>
+                  <div class="phone-gesture-bar"></div>
+                </div>
+              </div>
+
+              <!-- Multi-Device Data Layer Sync Bridge -->
+              <div class="sync-bridge" aria-hidden="true">
+                <span class="sync-bridge-dot"></span>
+                <div class="sync-bridge-line"></div>
+                <span>DATA LAYER</span>
+                <span style="color: var(--white-pure);">84% SYNC</span>
+              </div>
+
+              <!-- Circular Wear OS Smartwatch Frame -->
+              <div class="watch-mockup" aria-label="Wear OS Smartwatch Synced Dial">
+                <div class="watch-strap-top"></div>
+                <div class="watch-case">
+                  <div class="watch-screen">
+                    <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="75" cy="75" r="66" stroke="#1e293b" stroke-width="6" fill="none"/>
+                      <circle cx="75" cy="75" r="66" stroke="#83b867" stroke-width="6" stroke-dasharray="345 415" stroke-linecap="round" transform="rotate(-90 75 75)" fill="none"/>
+                      <text x="75" y="34" text-anchor="middle" fill="#9bb8d0" font-family="monospace" font-size="9" font-weight="bold">VANCOUVER · GPS</text>
+                      <text x="75" y="68" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="30" font-weight="800">84%</text>
+                      <text x="75" y="84" text-anchor="middle" fill="#9fc28c" font-family="sans-serif" font-size="10.5" font-weight="700">SOLID SHADE</text>
+                      <rect x="33" y="93" width="84" height="18" rx="9" fill="#142923" stroke="#73a156" stroke-width="1"/>
+                      <text x="75" y="105" text-anchor="middle" fill="#dcfce7" font-family="monospace" font-size="8.5" font-weight="bold">⏳ 4h 30m WINDOW</text>
+                      <text x="75" y="126" text-anchor="middle" fill="#df564e" font-family="monospace" font-size="8.5" font-weight="bold">UV 1.6 LOW</text>
+                    </svg>
+                  </div>
+                </div>
+                <div class="watch-strap-bottom"></div>
+              </div>
+            </div>
+
+            <!-- Interactive Screen & Video Switcher -->
+            <div class="screen-switcher" role="tablist" aria-label="Sky Cover Screen Switcher">
+              <button type="button" class="screen-tab active" onclick="switchSkyCoverScreen('image', 'assets/01_live_shade_tracker.png', this)">☁️ Live Shade</button>
+              <button type="button" class="screen-tab" onclick="switchSkyCoverScreen('video', 'assets/sky_cover_play_store_promo.mp4', this)">🎬 Live Video Demo</button>
+              <button type="button" class="screen-tab" onclick="switchSkyCoverScreen('image', 'assets/02_hourly_cloud_chart_windows.png', this)">📊 48h/7d Chart</button>
+              <button type="button" class="screen-tab" onclick="switchSkyCoverScreen('image', 'assets/04_night_sky_stargazing.png', this)">✨ Night Sky 9.4</button>
+              <button type="button" class="screen-tab" onclick="switchSkyCoverScreen('image', 'assets/06_solar_energy_sun_laundry.png', this)">☀ Solar &amp; UV</button>
+              <button type="button" class="screen-tab" onclick="switchSkyCoverScreen('image', 'assets/07_interactive_map_locations.png', this)">🗺 Map Picker</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- BOX 2 (TECH STACK): Badges & Platform Specs -->
+        <aside class="bento-box bento-stack">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_settings.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 02</span> · <span class="tri-white">TECH STACK &amp; TARGETS</span></span>
+              <span>KOTLIN</span>
+            </div>
+            <h3 style="margin: 0 0 6px; font-size: 20px;">Engineering Stack</h3>
+            <p style="color: var(--muted); font-size: 13.5px; margin: 0;">Built natively for phones, 10-inch tablets, Chromebooks, and Wear OS smartwatches.</p>
+
+            <div class="tech-badge-grid">
+              <span class="tech-badge">Kotlin 1.9</span>
+              <span class="tech-badge">Coroutines &amp; Flow</span>
+              <span class="tech-badge">Target SDK 36</span>
+              <span class="tech-badge">Play Billing 8.0.0</span>
+              <span class="tech-badge">Wearable Data Layer</span>
+              <span class="tech-badge">WorkManager</span>
+              <span class="tech-badge">Open-Meteo API</span>
+              <span class="tech-badge">OSMDroid / Leaflet</span>
+              <span class="tech-badge">True Dark OLED UI</span>
+            </div>
+
+            <div class="stack-meta-list">
+              <div class="stack-meta-row">
+                <span>Application ID</span>
+                <strong>com.pereralabs.skycover</strong>
+              </div>
+              <div class="stack-meta-row">
+                <span>Compile / Target SDK</span>
+                <strong>API 36 (Android 16)</strong>
+              </div>
+              <div class="stack-meta-row">
+                <span>Min SDK (Phone / Watch)</span>
+                <strong>API 26 / API 30 (Wear OS)</strong>
+              </div>
+              <div class="stack-meta-row">
+                <span>Monetization</span>
+                <strong>Freemium + Pro &amp; Promo Codes</strong>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- BOX 3 (RELEASE / METRICS): Live Signed Status Pill + SHA-256 + Direct APK -->
+        <aside class="bento-box bento-release">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_night.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 03</span> · <span class="tri-green">RELEASE &amp; INTEGRITY FEED</span></span>
+              <span>v1.5 (CODE 6)</span>
+            </div>
+
+            <div class="release-pill">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>● Signed Release · SHA-256 Verified</span>
+            </div>
+
+            <p style="color: var(--muted); font-size: 13.5px; margin: 0 0 12px;">Production release signed with the official Perera Labs upload key (`skycover-upload-key.jks`) and verified for direct installation or Play Store delivery.</p>
+
+            <div class="sha-box">
+              <span class="sha-label">SHA-256 Checksum (skycover-release.apk · v1.5):</span>
+              946ebd68e0f46d495ed0835513f119fe52193703cd976467540d4edfb3f7920c
+            </div>
+
+            <div class="links" style="margin-top: 16px;">
+              <a class="pill-link primary" href="https://github.com/pereralabs/pereralabs.github.io/releases/download/SkyCover1.5/skycover-release.apk" target="_blank" rel="noopener">⬇ Download v1.5 APK</a>
+              <a class="pill-link apk-download" href="https://play.google.com/store/apps/details?id=com.pereralabs.skycover" target="_blank" rel="noopener">Google Play ↗</a>
+              <a class="pill-link" href="https://github.com/pereralabs/pereralabs.github.io/releases/tag/SkyCover1.5" target="_blank" rel="noopener">GitHub Release ↗</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- BOX 4 (ARCHITECTURE NOTE): Battery-Optimized Background Shade Polling & Data Layer Sync -->
+        <article class="bento-box bento-arch">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_outlook.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 04</span> · <span class="tri-white">ARCHITECTURE HIGHLIGHT</span></span>
+              <span class="tri-green">BATTERY-AWARE SHADE ALERT WORKER &amp; WEAR OS SYNC</span>
+            </div>
+            <div class="arch-grid">
+              <div>
+                <h4 style="margin: 0 0 8px; font-size: 19px; color: var(--white-pure);">Zero-Drain Background Polling &amp; Contiguous Shade Window Detection</h4>
+                <p style="color: var(--muted); font-size: 14px; margin: 0 0 10px;">Instead of running a persistent foreground GPS service that drains battery, Sky Cover schedules a constrained `CoroutineWorker` via `WorkManager` that evaluates 48-hour cloud &amp; UV arrays against the user's custom threshold (30%–95%) and pushes a compact `PutDataMapRequest` payload to any paired Wear OS watch.</p>
+              </div>
+              <pre class="arch-code"><code><span class="cmt">// Contiguous Shade Window &amp; Wear OS DataClient Sync</span>
+<span class="kw">val</span> window = hourlyCloud.<span class="fn">drop</span>(nowIdx)
+  .<span class="fn">takeWhile</span> { it.cloudPct &gt;= userThreshold &amp;&amp; it.isDaylight }
+<span class="kw">if</span> (window.size &gt;= <span class="str">2</span>) {
+  <span class="typ">PutDataMapRequest</span>.<span class="fn">create</span>(<span class="str">"/skycover/live_shade"</span>).<span class="fn">apply</span> {
+    dataMap.<span class="fn">putInt</span>(<span class="str">"cloud_pct"</span>, currentCloudPct)
+    dataMap.<span class="fn">putInt</span>(<span class="str">"window_hrs"</span>, window.size)
+    wearDataClient.<span class="fn">putDataItem</span>(<span class="fn">asPutDataRequest</span>().<span class="fn">setUrgent</span>())
+  }
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         BENTO SHOWCASE 2: CHEAPOTRIP (ANDROID)
+         ====================================================================== -->
+    <div class="bento-app-wrapper" style="margin-bottom: 12px;">
+      <div class="bento-grid">
+
+        <!-- BOX 1 (HERO): Flat-Edge Phone Mockup with CheapoTrip Interactive UI -->
+        <article class="bento-box bento-hero">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_outlook.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 01</span> · <span class="tri-white">DEVICE PREVIEW</span></span>
+              <span class="badge-pill">ANDROID TRAVEL PLANNER</span>
+            </div>
+
+            <div class="bento-title-row">
+              <div class="app-icon">✈</div>
+              <div>
+                <h3>CheapoTrip</h3>
+                <p class="sub">Frugal Itinerary &amp; Daily Travel Budget Engine</p>
+              </div>
+            </div>
+
+            <p style="color: var(--muted); font-size: 15px; margin: 0;">Built around one simple idea: seeing the world should be possible without spending recklessly. Organizes multi-stop itineraries, tracks daily burn rates across local currencies, and compares transit &amp; lodging side-by-side.</p>
+
+            <div class="device-stage">
+              <div class="phone-mockup" style="height: 390px;" aria-label="CheapoTrip Phone Mockup">
+                <div class="phone-screen">
+                  <div class="phone-camera-punch"></div>
+                  <svg viewBox="0 0 220 380" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="220" height="380" fill="#091322"/>
+                    <text x="18" y="38" fill="#9bb8d0" font-family="monospace" font-size="9">ACTIVE TRIP · 7 DAYS</text>
+                    <text x="18" y="56" fill="#f8fafc" font-family="sans-serif" font-size="16" font-weight="bold">Lisbon &amp; Porto</text>
+                    <!-- Daily Budget Card -->
+                    <rect x="14" y="68" width="192" height="74" rx="12" fill="#132236" stroke="#73a156" stroke-width="1.4"/>
+                    <text x="26" y="88" fill="#9fc28c" font-family="monospace" font-size="9" font-weight="bold">DAILY TARGET REMAINING</text>
+                    <text x="26" y="114" fill="#f8fafc" font-family="sans-serif" font-size="24" font-weight="800">$42.50 <tspan font-size="11" fill="#9bb8d0">/ $65 CAD</tspan></text>
+                    <rect x="26" y="124" width="168" height="6" rx="3" fill="#0a121e"/>
+                    <rect x="26" y="124" width="110" height="6" rx="3" fill="#83b867"/>
+                    <!-- Category Breakdown Bars -->
+                    <rect x="14" y="154" width="192" height="112" rx="12" fill="#132236" stroke="#6485a0" stroke-opacity="0.45"/>
+                    <text x="26" y="174" fill="#f8fafc" font-family="sans-serif" font-size="11" font-weight="bold">Cost Split · Hostels &amp; Rail</text>
+                    <rect x="26" y="186" width="124" height="8" rx="4" fill="#df564e"/>
+                    <text x="158" y="193" fill="#f8fafc" font-family="monospace" font-size="9">$28 Stay</text>
+                    <rect x="26" y="206" width="76" height="8" rx="4" fill="#f8fafc"/>
+                    <text x="112" y="213" fill="#f8fafc" font-family="monospace" font-size="9">$14 Food</text>
+                    <rect x="26" y="226" width="48" height="8" rx="4" fill="#83b867"/>
+                    <text x="82" y="233" fill="#9fc28c" font-family="monospace" font-size="9">$8 Metro</text>
+                    <text x="26" y="254" fill="#9fc28c" font-family="monospace" font-size="8.5">✦ $15.00 under daily cap!</text>
+                    <!-- Route Map Footer -->
+                    <rect x="14" y="278" width="192" height="76" rx="12" fill="#0d192b" stroke="#9fc28c" stroke-opacity="0.4"/>
+                    <path d="M34,332 Q105,286 184,318" stroke="#f8fafc" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+                    <circle cx="34" cy="332" r="4.5" fill="#df564e"/>
+                    <circle cx="110" cy="306" r="4.5" fill="#f8fafc"/>
+                    <circle cx="184" cy="318" r="5" fill="#83b867"/>
+                  </svg>
+                  <div class="phone-gesture-bar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BOX 2 (TECH STACK) -->
+        <aside class="bento-box bento-stack">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_settings.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 02</span> · <span class="tri-white">TECH STACK</span></span>
+              <span>ANDROID</span>
+            </div>
+            <h3 style="margin: 0 0 6px; font-size: 20px;">Frugal Travel Stack</h3>
+            <div class="tech-badge-grid">
+              <span class="tech-badge">Kotlin</span>
+              <span class="tech-badge">Offline-First Storage</span>
+              <span class="tech-badge">Multi-Currency Engine</span>
+              <span class="tech-badge">Material 3 Dark UI</span>
+              <span class="tech-badge">Itinerary Ledger</span>
+              <span class="tech-badge">Zero-Roaming Mode</span>
+            </div>
+            <div class="stack-meta-list">
+              <div class="stack-meta-row">
+                <span>Primary Platform</span>
+                <strong>Android Phones &amp; Tablets</strong>
+              </div>
+              <div class="stack-meta-row">
+                <span>Offline Capability</span>
+                <strong>100% Local Ledger &amp; Cached FX</strong>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- BOX 3 (RELEASE / METRICS) -->
+        <aside class="bento-box bento-release">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 03</span> · <span class="tri-green">PORTFOLIO BUILD</span></span>
+              <span>ANDROID</span>
+            </div>
+            <div class="release-pill">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>● Perera Labs Portfolio Build</span>
+            </div>
+            <p style="color: var(--muted); font-size: 13.5px; margin: 0;">Created from personal travel budgeting experiences to stretch limited trip funds further without sacrificing experiences.</p>
+          </div>
+        </aside>
+
+        <!-- BOX 4 (ARCHITECTURE NOTE) -->
+        <article class="bento-box bento-arch">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_night.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 04</span> · <span class="tri-white">ARCHITECTURE HIGHLIGHT</span></span>
+              <span class="tri-green">DYNAMIC DAILY ROLLOVER &amp; FX LEDGER</span>
+            </div>
+            <div class="arch-grid">
+              <div>
+                <h4 style="margin: 0 0 8px; font-size: 19px; color: var(--white-pure);">Offline-First Currency &amp; Daily Surplus Rollover</h4>
+                <p style="color: var(--muted); font-size: 14px; margin: 0;">Travelers on tight budgets often keep cellular data off abroad. CheapoTrip caches exchange rates locally and dynamically recalculates your remaining daily allowance whenever you log under or over budget.</p>
+              </div>
+              <pre class="arch-code"><code><span class="kw">fun</span> <span class="fn">computeAdjustedDailyCap</span>(trip: <span class="typ">TripBudget</span>, dayIndex: <span class="typ">Int</span>): <span class="typ">Double</span> {
+  <span class="kw">val</span> spentSoFar = trip.entries.<span class="fn">filter</span> { it.day &lt; dayIndex }.<span class="fn">sumOf</span> { it.amountHome }
+  <span class="kw">val</span> daysLeft = (trip.totalDays - dayIndex).<span class="fn">coerceAtLeast</span>(<span class="str">1</span>)
+  <span class="kw">return</span> ((trip.totalCap - spentSoFar) / daysLeft).<span class="fn">coerceAtLeast</span>(<span class="str">0.0</span>)
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 2: WEAR OS APPS (Smartwatch & Wrist-First Experiences)
+       ======================================================================== -->
+  <section id="wearos-apps" class="portfolio-section" style="margin-bottom: 16px;">
+    <div class="portfolio-section-header">
+      <div>
+        <p class="eyebrow">
+          <span class="tri-red">SECTION 02</span>
+          <span class="tri-sep">·</span>
+          <span class="tri-white">SMARTWATCH &amp; WRIST-FIRST TOOLS</span>
+        </p>
+        <h2>⌚ Wear OS <span class="tri-red">Apps</span></h2>
+        <p>Standalone and wrist-first smartwatch applications engineered for instant one-tap actions, glanceable health &amp; environmental tracking, and seamless Android phone companion integration.</p>
+      </div>
+      <span class="badge-pill">WEAR OS BY GOOGLE · API 30–36</span>
+    </div>
+
+    <!-- ======================================================================
+         BENTO SHOWCASE 3: SMOKE OUT (STANDALONE WEAR OS + PHONE COMPANION)
+         ====================================================================== -->
+    <div class="bento-app-wrapper">
+      <div class="bento-grid">
+
+        <!-- BOX 1 (HERO): Side-by-Side Standalone Watch + Android Phone Companion -->
+        <article class="bento-box bento-hero">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_tools.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 01</span> · <span class="tri-white">STANDALONE WATCH + PHONE COMPANION</span></span>
+              <span class="badge-pill">WEAR OS FIRST</span>
+            </div>
+
+            <div class="bento-title-row">
+              <div class="app-icon">♡</div>
+              <div>
+                <h3>Smoke Out</h3>
+                <p class="sub">Standalone Wear OS App with Android Phone Companion</p>
+              </div>
+            </div>
+
+            <p style="color: var(--muted); font-size: 15px; margin: 0;">A standalone Wear OS smartwatch app paired with a companion app for Android phones, designed to help people reduce smoking gradually at their own pace. Set your daily target and log habits independently on your wrist, then sync with the Android phone companion for long-term reduction curves and encouraging recovery milestones.</p>
+
+            <!-- Side-by-Side Circular Wear OS Watch + Flat-Edge Phone Companion -->
+            <div class="device-stage">
+              <!-- Circular Wear OS Smartwatch (Primary Standalone Device) -->
+              <div class="watch-mockup" aria-label="Smoke Out Standalone Wear OS Watch">
+                <div class="watch-strap-top"></div>
+                <div class="watch-case">
+                  <div class="watch-screen">
+                    <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="75" cy="75" r="65" stroke="#1e293b" stroke-width="6" fill="none"/>
+                      <circle cx="75" cy="75" r="65" stroke="#83b867" stroke-width="6" stroke-dasharray="260 410" stroke-linecap="round" transform="rotate(-90 75 75)" fill="none"/>
+                      <text x="75" y="34" text-anchor="middle" fill="#9fc28c" font-family="monospace" font-size="8.5" font-weight="bold">STANDALONE WATCH</text>
+                      <text x="75" y="64" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="25" font-weight="800">4 / 8</text>
+                      <text x="75" y="79" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="9.5">DAILY TARGET LEFT</text>
+                      <rect x="34" y="88" width="82" height="22" rx="11" fill="#73a156" stroke="#c0e2b0" stroke-width="1"/>
+                      <text x="75" y="102" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold">+ LOG WRIST</text>
+                      <text x="75" y="124" text-anchor="middle" fill="#df564e" font-family="monospace" font-size="8.5" font-weight="bold">♥ CO2 LEVELS DROPPING</text>
+                    </svg>
+                  </div>
+                </div>
+                <div class="watch-strap-bottom"></div>
+              </div>
+
+              <!-- Sync Bridge -->
+              <div class="sync-bridge" aria-hidden="true">
+                <span class="sync-bridge-dot"></span>
+                <div class="sync-bridge-line"></div>
+                <span>COMPANION</span>
+                <span style="color: var(--white-pure);">DATA SYNC</span>
+              </div>
+
+              <!-- Android Phone Companion Mockup -->
+              <div class="phone-mockup" style="width: 205px; height: 368px;" aria-label="Smoke Out Android Phone Companion">
+                <div class="phone-screen">
+                  <div class="phone-camera-punch"></div>
+                  <svg viewBox="0 0 205 368" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="205" height="368" fill="#091220"/>
+                    <text x="16" y="36" fill="#9bb8d0" font-family="monospace" font-size="8.5">PHONE COMPANION</text>
+                    <text x="16" y="54" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="bold">Smoke Out Sync</text>
+                    <rect x="14" y="66" width="177" height="106" rx="12" fill="#132235" stroke="#9fc28c" stroke-opacity="0.5"/>
+                    <text x="24" y="84" fill="#9fc28c" font-family="monospace" font-size="8.5">30-DAY REDUCTION CURVE</text>
+                    <path d="M26,102 C70,108 115,138 175,152" stroke="#83b867" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    <circle cx="26" cy="102" r="4" fill="#df564e"/>
+                    <circle cx="102" cy="128" r="4" fill="#f8fafc"/>
+                    <circle cx="175" cy="152" r="4.5" fill="#83b867"/>
+                    <rect x="14" y="184" width="177" height="74" rx="12" fill="#132235" stroke="#df564e" stroke-opacity="0.45"/>
+                    <text x="24" y="204" fill="#df564e" font-family="monospace" font-size="8.5" font-weight="bold">RECOVERY MILESTONE</text>
+                    <text x="24" y="222" fill="#f8fafc" font-family="sans-serif" font-size="11" font-weight="bold">Oxygen &amp; Pulse Normalized</text>
+                    <text x="24" y="240" fill="#cbd5e1" font-family="sans-serif" font-size="9.5">-42% weekly cigarettes vs start</text>
+                    <rect x="14" y="270" width="177" height="62" rx="12" fill="#0e1b2d" stroke="#6485a0" stroke-opacity="0.35"/>
+                    <text x="24" y="292" fill="#9fc28c" font-family="monospace" font-size="9">⌚ Synced with Wear OS Watch</text>
+                    <text x="24" y="312" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="bold">$128.00 Saved This Month</text>
+                  </svg>
+                  <div class="phone-gesture-bar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BOX 2 (TECH STACK) -->
+        <aside class="bento-box bento-stack">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_settings.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 02</span> · <span class="tri-white">TECH STACK</span></span>
+              <span>WEAR OS + ANDROID</span>
+            </div>
+            <h3 style="margin: 0 0 6px; font-size: 20px;">Watch + Companion Stack</h3>
+            <div class="tech-badge-grid">
+              <span class="tech-badge">Wear OS Standalone</span>
+              <span class="tech-badge">Android Companion App</span>
+              <span class="tech-badge">Wearable DataClient</span>
+              <span class="tech-badge">Kotlin Coroutines</span>
+              <span class="tech-badge">Local Habit Store</span>
+              <span class="tech-badge">Health Milestone Engine</span>
+            </div>
+            <div class="stack-meta-list">
+              <div class="stack-meta-row">
+                <span>Primary App</span>
+                <strong>Standalone Wear OS Smartwatch</strong>
+              </div>
+              <div class="stack-meta-row">
+                <span>Phone Companion</span>
+                <strong>Synced Android Dashboard App</strong>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- BOX 3 (RELEASE / METRICS) -->
+        <aside class="bento-box bento-release">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 03</span> · <span class="tri-green">ARCHITECTURE MODE</span></span>
+              <span>WATCH + PHONE</span>
+            </div>
+            <div class="release-pill">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>● Standalone Watch + Phone Sync</span>
+            </div>
+            <p style="color: var(--muted); font-size: 13.5px; margin: 0;">Works completely standalone on your wrist even when your phone is left at home, and automatically reconciles your habit logs whenever your Android phone reconnects.</p>
+          </div>
+        </aside>
+
+        <!-- BOX 4 (ARCHITECTURE NOTE) -->
+        <article class="bento-box bento-arch">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_night.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 04</span> · <span class="tri-white">ARCHITECTURE HIGHLIGHT</span></span>
+              <span class="tri-green">OFFLINE-CAPABLE WATCH LEDGER &amp; COMPANION SYNC</span>
+            </div>
+            <div class="arch-grid">
+              <div>
+                <h4 style="margin: 0 0 8px; font-size: 19px; color: var(--white-pure);">Standalone Watch Persistence with Eventual Phone Sync</h4>
+                <p style="color: var(--muted); font-size: 14px; margin: 0;">Smoke Out persists daily target settings and timestamped habit logs locally on the Wear OS watch first, then broadcasts a `DataMap` delta to the Android phone companion dashboard.</p>
+              </div>
+              <pre class="arch-code"><code><span class="kw">fun</span> <span class="fn">logWristEventAndSync</span>(timestampMs: <span class="typ">Long</span>) {
+  watchLedger.<span class="fn">insertEvent</span>(timestampMs) <span class="cmt">// Standalone local persistence</span>
+  <span class="typ">PutDataMapRequest</span>.<span class="fn">create</span>(<span class="str">"/smokeout/daily_ledger"</span>).<span class="fn">run</span> {
+    dataMap.<span class="fn">putLongArray</span>(<span class="str">"events"</span>, watchLedger.<span class="fn">todayTimestamps</span>())
+    dataMap.<span class="fn">putInt</span>(<span class="str">"daily_target"</span>, watchLedger.dailyTarget)
+    dataClient.<span class="fn">putDataItem</span>(<span class="fn">asPutDataRequest</span>().<span class="fn">setUrgent</span>())
+  }
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         BENTO SHOWCASE 4: CALL ME NOW! (WEAR OS TRIGGER + PHONE COMPANION)
+         ====================================================================== -->
+    <div class="bento-app-wrapper">
+      <div class="bento-grid">
+
+        <!-- BOX 1 (HERO): Side-by-Side Watch Trigger + Ringing Phone Mockup -->
+        <article class="bento-box bento-hero">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_night.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 01</span> · <span class="tri-white">DISCREET WRIST TRIGGER + PHONE CALL</span></span>
+              <span class="badge-pill">PERSONAL SAFETY</span>
+            </div>
+
+            <div class="bento-title-row">
+              <div class="app-icon">⌚</div>
+              <div>
+                <h3>Call Me Now!</h3>
+                <p class="sub">Wear OS One-Tap Safety Trigger &amp; Android Incoming Call Companion</p>
+              </div>
+            </div>
+
+            <p style="color: var(--muted); font-size: 15px; margin: 0;">A discreet fake-call safety system engineered to help you exit an uncomfortable or unsafe social situation gracefully. Tap your Wear OS smartwatch once without reaching for your pocket, and your Android phone rings on cue with a realistic incoming call screen.</p>
+
+            <!-- Side-by-Side Watch Trigger + Incoming Call Phone Frame -->
+            <div class="device-stage">
+              <div class="watch-mockup" aria-label="Call Me Now Wear OS Trigger">
+                <div class="watch-strap-top"></div>
+                <div class="watch-case">
+                  <div class="watch-screen">
+                    <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="75" cy="75" r="64" stroke="#df564e" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+                      <circle cx="75" cy="75" r="50" fill="#2a1215" stroke="#df564e" stroke-width="2.5"/>
+                      <text x="75" y="64" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="800">TRIGGER</text>
+                      <text x="75" y="80" text-anchor="middle" fill="#df564e" font-family="sans-serif" font-size="12" font-weight="800">FAKE CALL</text>
+                      <text x="75" y="98" text-anchor="middle" fill="#9fc28c" font-family="monospace" font-size="8.5">TAP · 5s DELAY</text>
+                    </svg>
+                  </div>
+                </div>
+                <div class="watch-strap-bottom"></div>
+              </div>
+
+              <div class="sync-bridge" aria-hidden="true">
+                <span class="sync-bridge-dot" style="background: var(--red-light); box-shadow: 0 0 10px var(--red-light);"></span>
+                <div class="sync-bridge-line"></div>
+                <span>MSG CLIENT</span>
+                <span style="color: var(--white-pure);">RING NOW</span>
+              </div>
+
+              <div class="phone-mockup" style="width: 205px; height: 368px;" aria-label="Call Me Now Incoming Call Screen">
+                <div class="phone-screen">
+                  <div class="phone-camera-punch"></div>
+                  <svg viewBox="0 0 205 368" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="205" height="368" fill="#08101c"/>
+                    <text x="102.5" y="48" text-anchor="middle" fill="#9fc28c" font-family="monospace" font-size="9">INCOMING CALL · MOBILE</text>
+                    <circle cx="102.5" cy="104" r="32" fill="#17283d" stroke="#9bb8d0" stroke-width="1.8"/>
+                    <text x="102.5" y="113" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="24" font-weight="bold">M</text>
+                    <text x="102.5" y="162" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="20" font-weight="bold">Mom</text>
+                    <text x="102.5" y="180" text-anchor="middle" fill="#9bb8d0" font-family="monospace" font-size="10.5">(647) 555-0194</text>
+                    <!-- Accept / Decline Call Buttons -->
+                    <circle cx="56" cy="296" r="24" fill="#b83832"/>
+                    <text x="56" y="301" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">End</text>
+                    <circle cx="149" cy="296" r="24" fill="#73a156"/>
+                    <text x="149" y="301" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">Answer</text>
+                  </svg>
+                  <div class="phone-gesture-bar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BOX 2 (TECH STACK) -->
+        <aside class="bento-box bento-stack">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_settings.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 02</span> · <span class="tri-white">TECH STACK</span></span>
+              <span>SAFETY SYSTEM</span>
+            </div>
+            <h3 style="margin: 0 0 6px; font-size: 20px;">Safety &amp; Trigger Stack</h3>
+            <div class="tech-badge-grid">
+              <span class="tech-badge">Wearable MessageClient</span>
+              <span class="tech-badge">Full-Screen Call Intent</span>
+              <span class="tech-badge">RingtoneManager</span>
+              <span class="tech-badge">Haptic Feedback</span>
+              <span class="tech-badge">WakeLock &amp; TurnScreenOn</span>
+              <span class="tech-badge">Custom Caller Personas</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- BOX 3 (RELEASE / METRICS) -->
+        <aside class="bento-box bento-release">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_outlook.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 03</span> · <span class="tri-green">SAFETY VERIFICATION</span></span>
+              <span>LOW LATENCY</span>
+            </div>
+            <div class="release-pill">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>● Sub-200ms Watch-to-Phone Trigger</span>
+            </div>
+            <p style="color: var(--muted); font-size: 13.5px; margin: 0;">Bypasses lock-screen restrictions using high-priority full-screen incoming call notifications and native ringtone vibration patterns.</p>
+          </div>
+        </aside>
+
+        <!-- BOX 4 (ARCHITECTURE NOTE) -->
+        <article class="bento-box bento-arch">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 04</span> · <span class="tri-white">ARCHITECTURE HIGHLIGHT</span></span>
+              <span class="tri-green">WEARABLE LISTENER SERVICE &amp; LOCK-SCREEN WAKE</span>
+            </div>
+            <div class="arch-grid">
+              <div>
+                <h4 style="margin: 0 0 8px; font-size: 19px; color: var(--white-pure);">Zero-Unlock Wrist Dispatch via `WearableListenerService`</h4>
+                <p style="color: var(--muted); font-size: 14px; margin: 0;">When the watch button is tapped, `MessageClient` dispatches an urgent `/trigger_fake_call` payload to the phone's background `WearableListenerService`, waking the screen over the lockscreen.</p>
+              </div>
+              <pre class="arch-code"><code><span class="kw">override fun</span> <span class="fn">onMessageReceived</span>(event: <span class="typ">MessageEvent</span>) {
+  <span class="kw">if</span> (event.path == <span class="str">"/callmenow/trigger_call"</span>) {
+    <span class="kw">val</span> delaySec = event.data.<span class="fn">decodeToString</span>().<span class="fn">toLongOrNull</span>() ?: <span class="str">5L</span>
+    callScheduler.<span class="fn">scheduleFullScreenIncomingCall</span>(delaySec)
+  }
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         BENTO SHOWCASE 5: SKY COVER FOR WEAR OS (v1.1 WATCH RELEASE)
+         ====================================================================== -->
+    <div class="bento-app-wrapper" style="margin-bottom: 12px;">
+      <div class="bento-grid">
+
+        <!-- BOX 1 (HERO) -->
+        <article class="bento-box bento-hero">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 01</span> · <span class="tri-white">WEAR OS WATCH SHOWCASE</span></span>
+              <span class="badge-pill">v1.1 (CODE 101)</span>
+            </div>
+
+            <div class="bento-title-row">
+              <div class="app-icon">
+                <img src="assets/skycover-logo.png" alt="Sky Cover Watch Logo">
+              </div>
+              <div>
+                <h3>Sky Cover for Wear OS</h3>
+                <p class="sub">com.pereralabs.skycover · Wrist-First Cloud &amp; UV Radar</p>
+              </div>
+            </div>
+
+            <p style="color: var(--muted); font-size: 15px; margin: 0;">Check live overhead cloud cover %, UV index, active shade window countdowns, and 6-hour sky forecasts at a glance on your smartwatch. Syncs automatically with the Sky Cover Android phone app or fetches live weather via on-watch GPS.</p>
+
+            <div class="device-stage">
+              <div class="watch-mockup" aria-label="Sky Cover Wear OS Current View">
+                <div class="watch-strap-top"></div>
+                <div class="watch-case">
+                  <div class="watch-screen">
+                    <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="75" cy="75" r="66" stroke="#1e293b" stroke-width="6" fill="none"/>
+                      <circle cx="75" cy="75" r="66" stroke="#83b867" stroke-width="6" stroke-dasharray="345 415" stroke-linecap="round" transform="rotate(-90 75 75)" fill="none"/>
+                      <text x="75" y="34" text-anchor="middle" fill="#9bb8d0" font-family="monospace" font-size="9" font-weight="bold">SHADE RADAR</text>
+                      <text x="75" y="68" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="30" font-weight="800">84%</text>
+                      <text x="75" y="84" text-anchor="middle" fill="#9fc28c" font-family="sans-serif" font-size="10.5" font-weight="700">HEAVY OVERCAST</text>
+                      <text x="75" y="104" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="9">18°C · UV 1.6 LOW</text>
+                      <text x="75" y="122" text-anchor="middle" fill="#9fc28c" font-family="monospace" font-size="8.5">● PHONE SYNCED</text>
+                    </svg>
+                  </div>
+                </div>
+                <div class="watch-strap-bottom"></div>
+              </div>
+
+              <div class="watch-mockup" aria-label="Sky Cover Wear OS 6-Hour Forecast View">
+                <div class="watch-strap-top"></div>
+                <div class="watch-case">
+                  <div class="watch-screen">
+                    <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="75" cy="75" r="66" stroke="#1e293b" stroke-width="4" fill="none"/>
+                      <text x="75" y="32" text-anchor="middle" fill="#9fc28c" font-family="monospace" font-size="9" font-weight="bold">NEXT 6 HOURS</text>
+                      <rect x="30" y="64" width="12" height="36" rx="4" fill="#83b867"/>
+                      <rect x="48" y="54" width="12" height="46" rx="4" fill="#83b867"/>
+                      <rect x="66" y="58" width="12" height="42" rx="4" fill="#f8fafc"/>
+                      <rect x="84" y="70" width="12" height="30" rx="4" fill="#6485a0"/>
+                      <rect x="102" y="78" width="12" height="22" rx="4" fill="#df564e"/>
+                      <text x="75" y="118" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="8.5">SHADE UNTIL 6:30 PM</text>
+                    </svg>
+                  </div>
+                </div>
+                <div class="watch-strap-bottom"></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BOX 2 (TECH STACK) -->
+        <aside class="bento-box bento-stack">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_settings.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 02</span> · <span class="tri-white">WATCH TECH STACK</span></span>
+              <span>API 30–36</span>
+            </div>
+            <h3 style="margin: 0 0 6px; font-size: 20px;">Wear OS Engineering</h3>
+            <div class="tech-badge-grid">
+              <span class="tech-badge">Wear OS SDK 36</span>
+              <span class="tech-badge">Wearable DataClient</span>
+              <span class="tech-badge">Play Billing 8.0.0</span>
+              <span class="tech-badge">FusedLocationProvider</span>
+              <span class="tech-badge">Round Watch Insets</span>
+              <span class="tech-badge">OLED Glare Control</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- BOX 3 (RELEASE / METRICS) -->
+        <aside class="bento-box bento-release">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_night.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 03</span> · <span class="tri-green">WATCH RELEASE VERIFICATION</span></span>
+              <span>v1.1 (CODE 101)</span>
+            </div>
+            <div class="release-pill">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>● Signed Watch Build · SHA-256 Verified</span>
+            </div>
+            <div class="sha-box">
+              <span class="sha-label">SHA-256 Checksum (skycover-watch-release.apk · v1.1):</span>
+              b2e916215423b11b7cd8e12dfe8060e27928a2c3e2b5697deff5dad67c3d6e77
+            </div>
+          </div>
+        </aside>
+
+        <!-- BOX 4 (ARCHITECTURE NOTE) -->
+        <article class="bento-box bento-arch">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_outlook.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <div class="bento-label">
+              <span><span class="tri-red">BOX 04</span> · <span class="tri-white">ARCHITECTURE HIGHLIGHT</span></span>
+              <span class="tri-green">HYBRID PHONE-SYNC + STANDALONE GPS FALLBACK</span>
+            </div>
+            <div class="arch-grid">
+              <div>
+                <h4 style="margin: 0 0 8px; font-size: 19px; color: var(--white-pure);">Dual-Source Location &amp; Threshold Sync</h4>
+                <p style="color: var(--muted); font-size: 14px; margin: 0;">The Wear OS watch listens for `/location_sync` DataItems from the phone app so your watch always mirrors the city you're inspecting on your phone, while seamlessly falling back to on-watch GPS when untethered.</p>
+              </div>
+              <pre class="arch-code"><code><span class="kw">override fun</span> <span class="fn">onDataChanged</span>(dataEvents: <span class="typ">DataEventBuffer</span>) {
+  dataEvents.<span class="fn">forEach</span> { event -&gt;
+    <span class="kw">if</span> (event.dataItem.uri.path == <span class="str">"/location_sync"</span>) {
+      <span class="kw">val</span> map = <span class="typ">DataMapItem</span>.<span class="fn">fromDataItem</span>(event.dataItem).dataMap
+      <span class="fn">fetchWatchWeather</span>(map.<span class="fn">getDouble</span>(<span class="str">"lat"</span>), map.<span class="fn">getDouble</span>(<span class="str">"lon"</span>))
+    }
+  }
+}</code></pre>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 <strong class="tri-red">Health</strong> · <strong class="tri-white">Technology</strong> · <strong class="tri-green">Innovation</strong> — Perera Labs</span>
+  <a href="index.html">← Back to profile</a>
+</footer>
+
+<script>
+function switchSkyCoverScreen(type, src, btn) {
+  var img = document.getElementById('skycover-screen-img');
+  var video = document.getElementById('skycover-screen-video');
+  var tabs = btn.parentElement.querySelectorAll('.screen-tab');
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove('active');
+  }
+  btn.classList.add('active');
+  if (type === 'video') {
+    img.style.display = 'none';
+    video.style.display = 'block';
+    video.play();
+  } else {
+    video.pause();
+    video.style.display = 'none';
+    img.src = src;
+    img.style.display = 'block';
+  }
+}
+</script>
+</body>
+</html>
