@@ -690,6 +690,22 @@ h1 .accent-steel {
   margin-top: 20px;
 }
 
+.current-feature-section {
+  margin: 40px 0 24px;
+}
+
+.current-feature-section > .section-heading {
+  margin-bottom: 18px;
+}
+
+.current-feature-section > .section-heading h2 {
+  font-size: clamp(26px, 3.6vw, 38px);
+}
+
+.current-feature-section .mission {
+  margin: 0 0 24px;
+}
+
 .card {
   padding: 30px;
 }
@@ -863,6 +879,66 @@ h1 .accent-steel {
   margin-bottom: 24px;
 }
 
+.skills-page-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 360px);
+  align-items: center;
+  gap: 32px;
+}
+
+.skills-heading-copy {
+  min-width: 0;
+}
+
+.skills-network-animation {
+  width: min(100%, 180px);
+  justify-self: center;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.3));
+}
+
+.skills-network-animation svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.skills-network-link {
+  animation: skills-network-flow 2.4s linear infinite;
+}
+
+.skills-network-packet {
+  animation: portfolio-sync-pulse 1.8s ease-in-out infinite;
+}
+
+.skills-network-packet-delay { animation-delay: 0.45s; }
+.skills-network-packet-third { animation-delay: 0.9s; }
+.skills-network-packet-fourth { animation-delay: 1.35s; }
+
+.skills-network-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: portfolio-device-float 3.4s ease-in-out infinite;
+}
+
+.skills-network-node-left-bottom { animation-delay: -0.85s; }
+.skills-network-node-right { animation-delay: -1.7s; }
+.skills-network-node-right-bottom { animation-delay: -2.55s; }
+
+.skills-network-core {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: skills-network-core-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes skills-network-flow {
+  to { stroke-dashoffset: -44; }
+}
+
+@keyframes skills-network-core-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
 .section-heading h2 {
   margin: 0;
   font-size: clamp(28px, 4vw, 42px);
@@ -975,6 +1051,110 @@ h1 .accent-steel {
   margin-bottom: 16px;
 }
 
+.contact-page-head {
+  max-width: 1140px;
+  display: grid;
+  grid-template-columns: minmax(0, 840px) minmax(180px, 1fr);
+  align-items: center;
+  gap: 32px;
+}
+
+.contact-page-copy {
+  min-width: 0;
+}
+
+.contact-mail-animation {
+  width: min(100%, 260px);
+  justify-self: center;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
+}
+
+.contact-mail-animation svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.contact-mail-letter {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: contact-letter-send 3.2s ease-in-out infinite;
+}
+
+@keyframes contact-letter-send {
+  0%, 12% { transform: translateY(24px) scale(0.82); opacity: 0.5; }
+  42%, 68% { transform: translateY(-27px) scale(1); opacity: 1; }
+  88%, 100% { transform: translateY(24px) scale(0.82); opacity: 0.5; }
+}
+
+.portfolio-page-head {
+  max-width: 1140px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 360px);
+  align-items: center;
+  gap: 32px;
+}
+
+.portfolio-page-copy {
+  min-width: 0;
+}
+
+.portfolio-sync-animation {
+  width: min(100%, 360px);
+  justify-self: center;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
+}
+
+.portfolio-sync-animation svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.portfolio-phone-float {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: portfolio-device-float 3.4s ease-in-out infinite;
+}
+
+.portfolio-laptop-float {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: portfolio-device-float 3.4s ease-in-out -0.85s infinite;
+}
+
+.portfolio-watch-float {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: portfolio-device-float 3.4s ease-in-out -1.7s infinite;
+}
+
+.portfolio-sync-packet {
+  animation: portfolio-sync-pulse 1.8s ease-in-out infinite;
+}
+
+.portfolio-sync-packet-delay {
+  animation-delay: 0.9s;
+}
+
+.portfolio-sync-packet-third {
+  animation-delay: 0.45s;
+}
+
+.portfolio-sync-packet-fourth {
+  animation-delay: 1.35s;
+}
+
+@keyframes portfolio-device-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes portfolio-sync-pulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.7); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
 .portfolio-section {
   max-width: 1060px;
   margin-bottom: 64px;
@@ -1079,6 +1259,28 @@ h1 .accent-steel {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.wearos-app-icon {
+  overflow: visible;
+}
+
+.wearos-icon-badge {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 28px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.wearos-icon-badge svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .app-info {
@@ -1496,6 +1698,98 @@ h1 .accent-steel {
   display: block;
 }
 
+.bento-contact-support:hover .contact-device-stage .phone-screen img {
+  animation: contact-phone-screen-pan 2.4s ease-in-out both;
+}
+
+.bento-contact-support:hover .contact-device-stage .watch-screen circle:first-child {
+  animation: contact-watch-ring-fill 1.5s ease-out both;
+}
+
+.bento-contact-support:hover .contact-device-stage .watch-screen text:nth-of-type(2) {
+  animation: contact-watch-reading 1.2s ease-in-out 0.4s both;
+}
+
+.bento-skycover:hover .phone-screen img,
+.bento-skycover:hover .phone-screen video {
+  animation: contact-phone-screen-pan 2.4s ease-in-out both;
+}
+
+.bento-skycover:hover .watch-screen svg circle:nth-of-type(2) {
+  animation: contact-watch-ring-fill 1.5s ease-out both;
+}
+
+.bento-skycover:hover .watch-screen svg text:nth-of-type(2) {
+  animation: contact-watch-reading 1.2s ease-in-out 0.4s both;
+}
+
+.bento-skycover:hover .watch-screen svg rect {
+  animation: skycover-forecast-bar 0.8s ease-out both;
+}
+
+.bento-skycover:hover .watch-screen svg rect:nth-of-type(2) { animation-delay: 0.08s; }
+.bento-skycover:hover .watch-screen svg rect:nth-of-type(3) { animation-delay: 0.16s; }
+.bento-skycover:hover .watch-screen svg rect:nth-of-type(4) { animation-delay: 0.24s; }
+.bento-skycover:hover .watch-screen svg rect:nth-of-type(5) { animation-delay: 0.32s; }
+.bento-skycover:hover .watch-screen svg rect:nth-of-type(6) { animation-delay: 0.4s; }
+
+.bento-callmenow:hover .callmenow-phone-screen > svg circle:nth-of-type(1) {
+  animation: callmenow-phone-ring 1.4s ease-out both;
+}
+
+.bento-callmenow:hover .callmenow-phone-screen > svg circle:nth-of-type(2) {
+  animation: callmenow-answer-pulse 1.2s ease-in-out 0.25s both;
+}
+
+.bento-callmenow:hover .callmenow-watch-screen svg circle:nth-of-type(1) {
+  animation: callmenow-watch-ripple 1.5s ease-out both;
+}
+
+.bento-callmenow:hover .callmenow-watch-screen svg circle:nth-of-type(2) {
+  animation: callmenow-answer-pulse 1.2s ease-in-out 0.25s both;
+}
+
+.bento-callmenow:hover .callmenow-watch-screen svg text:nth-of-type(2) {
+  animation: contact-watch-reading 1.2s ease-in-out 0.4s both;
+}
+
+@keyframes contact-phone-screen-pan {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.08) translateY(-1.5%); }
+  100% { transform: scale(1.04) translateY(0); }
+}
+
+@keyframes contact-watch-ring-fill {
+  from { stroke-dasharray: 0 415; opacity: 0.45; }
+  to { stroke-dasharray: 340 415; opacity: 1; }
+}
+
+@keyframes contact-watch-reading {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.58; }
+}
+
+@keyframes skycover-forecast-bar {
+  from { transform: scaleY(0.35); opacity: 0.55; }
+  to { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes callmenow-phone-ring {
+  0%, 100% { transform: scale(1); }
+  18%, 54% { transform: scale(1.12); }
+  36%, 72% { transform: scale(0.96); }
+}
+
+@keyframes callmenow-answer-pulse {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.12); filter: brightness(1.4); }
+}
+
+@keyframes callmenow-watch-ripple {
+  from { stroke-dashoffset: 36; opacity: 0.45; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+
 /* Interactive Screen Switcher Pills under Phone + Watch Stage */
 .screen-switcher {
   display: flex;
@@ -1656,6 +1950,28 @@ h1 .accent-steel {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
+.arch-code code {
+  display: block;
+  white-space: normal;
+}
+
+.arch-code .code-line {
+  display: block;
+  width: max-content;
+  white-space: pre;
+  clip-path: inset(0 0 0 0);
+}
+
+.bento-arch:hover .arch-code .code-line {
+  animation: architecture-code-type 0.3s steps(60, end) both;
+  animation-delay: calc(var(--line-index) * 0.3s);
+}
+
+@keyframes architecture-code-type {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
 .arch-code .kw { color: var(--red-light); font-weight: 600; }
 .arch-code .fn { color: var(--green-light); }
 .arch-code .str { color: #fde047; }
@@ -1717,6 +2033,36 @@ footer a:hover {
   .page {
     padding-top: 48px;
     padding-bottom: 60px;
+  }
+  .contact-page-head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .portfolio-page-head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .skills-page-heading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .skills-network-animation {
+    width: 140px;
+    justify-self: end;
+    margin-top: -14px;
+    margin-bottom: -20px;
+  }
+  .portfolio-sync-animation {
+    width: 280px;
+    justify-self: end;
+    margin-top: -14px;
+    margin-bottom: -20px;
+  }
+  .contact-mail-animation {
+    width: 160px;
+    justify-self: end;
+    margin-top: -18px;
+    margin-bottom: -20px;
   }
   .profile-grid,
   .skills-grid {

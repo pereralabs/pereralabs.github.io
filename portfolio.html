@@ -24,19 +24,55 @@
 </div>
 
 <main class="page">
-  <header class="page-head">
-    <p class="eyebrow">
-      <span class="tri-red">HEALTH</span>
-      <span class="tri-sep">|</span>
-      <span class="tri-white">TECHNOLOGY</span>
-      <span class="tri-sep">|</span>
-      <span class="tri-green">INNOVATION</span>
-    </p>
-    <h1>Portfolio built to make <span class="accent-red">everyday</span> <span class="accent-white">life</span> <span class="accent-green">a little better.</span></h1>
-    <p class="lead">Explore interactive Android &amp; Wear OS device showcases, technical architecture highlights, and SHA-256 verified release builds engineered around real-world sensory health, personal safety, and everyday resilience.</p>
-    <div class="buttons" style="margin-top: 24px;">
-      <a class="button primary" href="#android-apps">📱 Android Apps ↓</a>
-      <a class="button apk-download" href="#wearos-apps">⌚ Wear OS Apps ↓</a>
+  <header class="page-head portfolio-page-head">
+    <div class="portfolio-page-copy">
+      <p class="eyebrow">
+        <span class="tri-red">HEALTH</span>
+        <span class="tri-sep">|</span>
+        <span class="tri-white">TECHNOLOGY</span>
+        <span class="tri-sep">|</span>
+        <span class="tri-green">INNOVATION</span>
+      </p>
+      <h1>Portfolio built to make <span class="accent-red">everyday</span> <span class="accent-white">life</span> <span class="accent-green">a little better.</span></h1>
+      <p class="lead">Explore interactive Android &amp; Wear OS device showcases, technical architecture highlights, and SHA-256 verified release builds engineered around real-world sensory health, personal safety, and everyday resilience.</p>
+      <div class="buttons" style="margin-top: 24px;">
+        <a class="button primary" href="#android-apps">📱 Android Apps ↓</a>
+        <a class="button apk-download" href="#wearos-apps">⌚ Wear OS Apps ↓</a>
+      </div>
+    </div>
+    <div class="portfolio-sync-animation" aria-hidden="true">
+      <svg viewBox="0 0 460 190" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="230" cy="176" rx="218" ry="10" fill="#050911" fill-opacity="0.45"/>
+        <g class="portfolio-laptop-float">
+          <rect x="15" y="20" width="130" height="136" rx="9" fill="#152336" stroke="#9bb8d0" stroke-width="3"/>
+          <rect x="22" y="28" width="116" height="120" rx="3" fill="#08101c" stroke="#7494ae" stroke-width="1.5"/>
+          <path d="M39 54h27m-27 10h78m-78 10h64m-64 10h72" stroke="#83b867" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M38 104h72m-72 10h52m-52 10h64" stroke="#7494ae" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M10 159h140l-12 14H22Z" fill="#243548" stroke="#9bb8d0" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M65 162h30" stroke="#7494ae" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+        <g class="portfolio-phone-float">
+          <rect x="185" y="15" width="130" height="160" rx="19" fill="#152336" stroke="#9bb8d0" stroke-width="3"/>
+          <rect x="194" y="28" width="112" height="134" rx="11" fill="#08101c" stroke="#7494ae" stroke-width="1.5"/>
+          <rect x="229" y="21" width="42" height="3" rx="2" fill="#7494ae"/>
+          <circle cx="250" cy="94" r="28" fill="#142923" stroke="#83b867" stroke-width="2"/>
+          <path d="M229 94h42M250 73v42" stroke="#9fc28c" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M216 136h68M226 147h48" stroke="#7494ae" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <g class="portfolio-watch-float">
+          <rect x="379" y="11" width="42" height="52" rx="13" fill="#243548" stroke="#7494ae" stroke-width="2"/>
+          <rect x="379" y="127" width="42" height="52" rx="13" fill="#243548" stroke="#7494ae" stroke-width="2"/>
+          <circle cx="400" cy="95" r="50" fill="#152336" stroke="#9bb8d0" stroke-width="3"/>
+          <circle cx="400" cy="95" r="40" fill="#08101c" stroke="#83b867" stroke-width="2"/>
+          <path d="M400 69v27l18 11" fill="none" stroke="#f8fafc" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="400" cy="95" r="3.5" fill="#df564e"/>
+        </g>
+        <path d="M151 84h31M151 106h31M319 84h30M319 106h30" fill="none" stroke="#9fc28c" stroke-opacity="0.75" stroke-width="2.5" stroke-dasharray="4 5"/>
+        <circle class="portfolio-sync-packet" cx="153" cy="84" r="3.5" fill="#df564e"/>
+        <circle class="portfolio-sync-packet portfolio-sync-packet-delay" cx="153" cy="106" r="3.5" fill="#83b867"/>
+        <circle class="portfolio-sync-packet portfolio-sync-packet-third" cx="321" cy="84" r="4" fill="#df564e"/>
+        <circle class="portfolio-sync-packet portfolio-sync-packet-fourth" cx="321" cy="106" r="4" fill="#83b867"/>
+      </svg>
     </div>
   </header>
 
@@ -64,7 +100,7 @@
       <div class="bento-grid">
 
         <!-- BOX 1 (HERO): Side-by-Side Phone + Wear OS Watch Interactive Preview -->
-        <article class="bento-box bento-hero">
+        <article class="bento-box bento-hero bento-skycover">
           <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
           <div class="card-bg-scrim"></div>
           <div class="card-content">
@@ -569,7 +605,7 @@
       <div class="bento-grid">
 
         <!-- BOX 1 (HERO): Side-by-Side Watch Trigger + Ringing Phone Mockup -->
-        <article class="bento-box bento-hero">
+        <article class="bento-box bento-hero bento-callmenow">
           <div class="card-bg-layer" style="background-image: url('assets/bg_tab_night.jpg');"></div>
           <div class="card-bg-scrim"></div>
           <div class="card-content">
@@ -593,7 +629,7 @@
               <div class="watch-mockup" aria-label="Call Me Now Wear OS Trigger">
                 <div class="watch-strap-top"></div>
                 <div class="watch-case">
-                  <div class="watch-screen">
+                  <div class="watch-screen callmenow-watch-screen">
                     <svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="75" cy="75" r="64" stroke="#df564e" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
                       <circle cx="75" cy="75" r="50" fill="#2a1215" stroke="#df564e" stroke-width="2.5"/>
@@ -614,7 +650,7 @@
               </div>
 
               <div class="phone-mockup" style="width: 205px; height: 368px;" aria-label="Call Me Now Incoming Call Screen">
-                <div class="phone-screen">
+                <div class="phone-screen callmenow-phone-screen">
                   <div class="phone-camera-punch"></div>
                   <svg viewBox="0 0 205 368" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
                     <rect width="205" height="368" fill="#08101c"/>
@@ -708,7 +744,7 @@
       <div class="bento-grid">
 
         <!-- BOX 1 (HERO) -->
-        <article class="bento-box bento-hero">
+        <article class="bento-box bento-hero bento-skycover">
           <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
           <div class="card-bg-scrim"></div>
           <div class="card-content">
@@ -718,8 +754,17 @@
             </div>
 
             <div class="bento-title-row">
-              <div class="app-icon">
+              <div class="app-icon wearos-app-icon">
                 <img src="assets/skycover-logo.png" alt="Sky Cover Watch Logo">
+                <span class="wearos-icon-badge" aria-hidden="true">
+                  <svg viewBox="0 0 32 40" focusable="false">
+                    <path d="M12 1h8l2 9H10l2-9Zm-2 21h12l-2 17h-8l-2-17Z" fill="#9bb8d0"/>
+                    <rect x="5" y="8" width="22" height="24" rx="7" fill="#0b1421" stroke="#f8fafc" stroke-width="2"/>
+                    <rect x="8" y="11" width="16" height="18" rx="5" fill="#152336" stroke="#9fc28c" stroke-width="1.5"/>
+                    <path d="M11 20h10M16 16v8" stroke="#f8fafc" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="16" cy="20" r="2" fill="#df564e"/>
+                  </svg>
+                </span>
               </div>
               <div>
                 <h3>Sky Cover for Wear OS</h3>
@@ -848,6 +893,59 @@
 </footer>
 
 <script>
+document.querySelectorAll('.arch-code code').forEach(function (code) {
+  var lines = [document.createElement('span')];
+  var lineIndex = 0;
+  lines[0].className = 'code-line';
+
+  function addText(text, ancestors) {
+    var parts = text.split('\n');
+    parts.forEach(function (part, index) {
+      if (part.length) {
+        var target = lines[lineIndex];
+        ancestors.forEach(function (ancestor) {
+          var clone = ancestor.cloneNode(false);
+          target.appendChild(clone);
+          target = clone;
+        });
+        target.appendChild(document.createTextNode(part));
+      }
+
+      if (index < parts.length - 1) {
+        lineIndex += 1;
+        lines.push(document.createElement('span'));
+        lines[lineIndex].className = 'code-line';
+      }
+    });
+  }
+
+  function visit(node, ancestors) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      addText(node.nodeValue, ancestors);
+      return;
+    }
+
+    if (node.nodeType === Node.ELEMENT_NODE) {
+      Array.from(node.childNodes).forEach(function (child) {
+        visit(child, ancestors.concat(node));
+      });
+    }
+  }
+
+  Array.from(code.childNodes).forEach(function (node) {
+    visit(node, []);
+  });
+  lines.forEach(function (line, index) {
+    line.style.setProperty('--line-index', index);
+  });
+  var content = [];
+  lines.forEach(function (line, index) {
+    if (index > 0) content.push(document.createTextNode('\n'));
+    content.push(line);
+  });
+  code.replaceChildren.apply(code, content);
+});
+
 function switchSkyCoverScreen(type, src, btn) {
   var img = document.getElementById('skycover-screen-img');
   var video = document.getElementById('skycover-screen-video');
