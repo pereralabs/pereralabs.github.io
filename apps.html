@@ -16,7 +16,7 @@
     </a>
     <div>
       <a href="index.html">About</a>
-      <a href="index.html#skills">Skills</a>
+      <a href="skills.html">Skills</a>
       <a class="active" href="apps.html">Portfolio</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -97,10 +97,10 @@
          BENTO SHOWCASE 1: SKY COVER (ANDROID + WEAR OS MULTI-DEVICE SYNC)
          ====================================================================== -->
     <div class="bento-app-wrapper">
-      <div class="bento-grid">
+      <div class="bento-grid skycover-grid">
 
         <!-- BOX 1 (HERO): Side-by-Side Phone + Wear OS Watch Interactive Preview -->
-        <article class="bento-box bento-hero bento-skycover">
+        <article id="skycover-showcase" class="bento-box bento-hero bento-skycover">
           <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
           <div class="card-bg-scrim"></div>
           <div class="card-content">
@@ -179,42 +179,31 @@
           <div class="card-bg-layer" style="background-image: url('assets/bg_tab_settings.jpg');"></div>
           <div class="card-bg-scrim"></div>
           <div class="card-content">
-            <div class="bento-label">
-              <span><span class="tri-red">BOX 02</span> · <span class="tri-white">TECH STACK &amp; TARGETS</span></span>
-              <span>KOTLIN</span>
-            </div>
-            <h3 style="margin: 0 0 6px; font-size: 20px;">Engineering Stack</h3>
-            <p style="color: var(--muted); font-size: 13.5px; margin: 0;">Built natively for phones, 10-inch tablets, Chromebooks, and Wear OS smartwatches.</p>
-
+            <h3 class="stack-panel-heading">Engineering Stack</h3>
             <div class="tech-badge-grid">
               <span class="tech-badge">Kotlin 1.9</span>
-              <span class="tech-badge">Coroutines &amp; Flow</span>
-              <span class="tech-badge">Target SDK 36</span>
-              <span class="tech-badge">Play Billing 8.0.0</span>
-              <span class="tech-badge">Wearable Data Layer</span>
+              <span class="tech-badge">Coroutines</span>
+              <span class="tech-badge">SDK 36</span>
+              <span class="tech-badge">Wear OS Sync</span>
               <span class="tech-badge">WorkManager</span>
-              <span class="tech-badge">Open-Meteo API</span>
-              <span class="tech-badge">OSMDroid / Leaflet</span>
-              <span class="tech-badge">True Dark OLED UI</span>
+              <span class="tech-badge">Open-Meteo</span>
             </div>
+            <p class="stack-compact-meta">Android 8+ · Wear OS 3+ · Freemium + Pro</p>
+          </div>
+        </aside>
 
-            <div class="stack-meta-list">
-              <div class="stack-meta-row">
-                <span>Application ID</span>
-                <strong>com.pereralabs.skycover</strong>
-              </div>
-              <div class="stack-meta-row">
-                <span>Compile / Target SDK</span>
-                <strong>API 36 (Android 16)</strong>
-              </div>
-              <div class="stack-meta-row">
-                <span>Min SDK (Phone / Watch)</span>
-                <strong>API 26 / API 30 (Wear OS)</strong>
-              </div>
-              <div class="stack-meta-row">
-                <span>Monetization</span>
-                <strong>Freemium + Pro &amp; Promo Codes</strong>
-              </div>
+        <aside class="bento-box bento-features">
+          <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
+          <div class="card-bg-scrim"></div>
+          <div class="card-content">
+            <h3 class="stack-panel-heading">App Features</h3>
+            <div class="feature-summary-lines">
+              <p><strong>Sensory comfort</strong> — muted true-dark visuals and calm data designed to reduce glare and visual overload.</p>
+              <p><strong>Shade planning</strong> — find overcast, diffused-light windows for walks, commutes, and outdoor plans.</p>
+              <p><strong>UV &amp; skin care</strong> — customizable alerts help you manage exposure based on personal sensitivity.</p>
+              <p><strong>Hydration &amp; activity</strong> — plan water breaks, walks, and outdoor exercise around heat, UV, and cloud cover.</p>
+              <p><strong>Solar &amp; home tools</strong> — align portable panels and forecast natural laundry drying or UV-cleaning windows.</p>
+              <p><strong>Night sky</strong> — check cloud conditions and clarity before stargazing.</p>
             </div>
           </div>
         </aside>

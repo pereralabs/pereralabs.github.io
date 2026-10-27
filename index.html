@@ -16,7 +16,7 @@
     </a>
     <div>
       <a class="active" href="index.html">About</a>
-      <a href="#skills">Skills</a>
+      <a href="skills.html">Skills</a>
       <a href="apps.html">Portfolio</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -61,10 +61,17 @@
 
   <!-- About Me -->
   <section class="mission mission-about" style="margin-top: 24px; margin-bottom: 24px;">
-    <div class="card-bg-layer" style="background-image: url('assets/bg_tab_settings.jpg');"></div>
+    <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
     <div class="card-bg-scrim"></div>
-    <div class="mission-mark about-profile">
-      <img src="assets/ruky-headshot.png" alt="Portrait of Ruky">
+    <div class="about-family-portraits" aria-label="Ruky with his parents">
+      <figure class="about-portrait">
+        <img src="assets/ruky-headshot.png" alt="Ruky">
+        <figcaption>Me</figcaption>
+      </figure>
+      <figure class="about-portrait about-portrait-heart">
+        <img src="assets/mom-dad-heart.png" alt="Ruky's parents together in a heart-shaped portrait">
+        <figcaption>Mom &amp; Dad</figcaption>
+      </figure>
     </div>
     <div class="card-content">
       <p class="eyebrow">
@@ -75,12 +82,12 @@
       <p>My journey in technology started at a very early age in hardware—opening up, troubleshooting, and learning the fundamentals on my dad's first <strong>IBM 386</strong>. From building and repairing machines, I naturally progressed into <strong>networking and systems infrastructure</strong>, learning how data moves and how connected environments stay resilient. Over time, I discovered that my true niche, creative enjoyment, and deepest satisfaction live in <strong>UI/UX design and software development</strong>—crafting thoughtful interfaces and writing code that directly helps people—while continuing to explore and study <strong>cybersecurity as a hobby</strong>.</p>
       <p style="margin-top: 14px;">My apps began as personal solutions to problems I needed to deal with myself. They explore practical ways technology can support wellbeing — from managing environmental light &amp; heat challenges and reducing smoking to personal safety and making limited resources go further. Every line of code is forged from real-world necessity, turning past hardships into functional tools for everyday resilience.</p>
 
-      <!-- Visual Journey Banner: IBM 386 CRT -> Network Nodes -> App UI & Design -> Cyber Shield -->
+      <!-- Visual Journey Banner: IBM 386 -> Router & Networks -> App Development -> Security -->
       <div class="card-graphic-banner" aria-hidden="true" style="margin-top: 18px; height: 108px;">
         <svg viewBox="0 0 680 108" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
           <rect width="680" height="108" fill="#09111e" fill-opacity="0.80"/>
           <!-- Connecting Progression Path -->
-          <path d="M125,54 L235,54 M315,54 L425,54 M505,54 L575,54" stroke="#6485a0" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+          <path d="M125,48 L235,48 M315,48 L425,48 M505,48 L575,48" stroke="#6485a0" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
 
           <!-- 1. Vintage IBM 386 Desktop & CRT Monitor -->
           <g class="journey-step journey-386">
@@ -90,33 +97,42 @@
             <rect x="28" y="70" width="78" height="16" rx="3" fill="#152336" stroke="#f8fafc" stroke-opacity="0.65" stroke-width="1.4"/>
             <rect x="78" y="75" width="20" height="4" rx="1" fill="#df564e"/>
             <circle cx="38" cy="78" r="2.5" fill="#9fc28c"/>
+            <text x="67" y="101" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="8" letter-spacing="0.8">IBM 386</text>
           </g>
 
-          <!-- 2. Networking & Routing Topology -->
+          <!-- 2. Router and connected network -->
           <g class="journey-step journey-network">
-            <circle cx="275" cy="32" r="10" fill="#152336" stroke="#f8fafc" stroke-width="1.8"/>
-            <circle cx="248" cy="72" r="10" fill="#152336" stroke="#9fc28c" stroke-width="1.8"/>
-            <circle cx="302" cy="72" r="10" fill="#152336" stroke="#df564e" stroke-width="1.8"/>
-            <line x1="275" y1="42" x2="253" y2="63" stroke="#f8fafc" stroke-width="1.8"/>
-            <line x1="275" y1="42" x2="297" y2="63" stroke="#9fc28c" stroke-width="1.8"/>
-            <line x1="258" y1="72" x2="292" y2="72" stroke="#df564e" stroke-width="1.8"/>
+            <path d="M254 34 248 20M296 34 302 20" fill="none" stroke="#9bb8d0" stroke-width="2" stroke-linecap="round"/>
+            <rect x="242" y="34" width="66" height="30" rx="7" fill="#152336" stroke="#f8fafc" stroke-width="1.8"/>
+            <path d="M250 45h50M250 52h50" stroke="#7494ae" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <circle cx="251" cy="58" r="2" fill="#83b867"/>
+            <circle cx="259" cy="58" r="2" fill="#df564e"/>
+            <circle cx="267" cy="58" r="2" fill="#9bb8d0"/>
+            <path d="M275 34V27M231 49h11M308 49h11" stroke="#9fc28c" stroke-width="1.8"/>
+            <circle cx="275" cy="24" r="5" fill="#152336" stroke="#f8fafc" stroke-width="1.5"/>
+            <circle cx="226" cy="49" r="5" fill="#152336" stroke="#9fc28c" stroke-width="1.5"/>
+            <circle cx="324" cy="49" r="5" fill="#152336" stroke="#df564e" stroke-width="1.5"/>
+            <text x="275" y="82" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="8" letter-spacing="0.8">NETWORK</text>
           </g>
 
-          <!-- 3. Design & App Development (Phone + Watch + Pen Curve) -->
+          <!-- 3. App design and development -->
           <g class="journey-step journey-app">
             <rect x="434" y="18" width="44" height="72" rx="8" fill="#132235" stroke="#9fc28c" stroke-width="2"/>
-            <circle cx="456" cy="42" r="9" fill="#73a156" fill-opacity="0.35" stroke="#9fc28c" stroke-width="1.5"/>
-            <rect x="442" y="58" width="28" height="5" rx="2.5" fill="#f8fafc"/>
-            <rect x="442" y="67" width="20" height="4" rx="2" fill="#df564e"/>
+            <rect x="440" y="25" width="32" height="56" rx="4" fill="#09131c" stroke="#7494ae" stroke-width="1"/>
+            <circle cx="456" cy="40" r="8" fill="#73a156" fill-opacity="0.35" stroke="#9fc28c" stroke-width="1.5"/>
+            <path d="M446 56h20M446 62h15M446 68h18" stroke="#f8fafc" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="456" cy="76" r="1.5" fill="#df564e"/>
             <circle cx="494" cy="64" r="16" fill="#132235" stroke="#f8fafc" stroke-width="1.6"/>
             <circle cx="494" cy="64" r="10" stroke="#9fc28c" stroke-width="1.8" stroke-dasharray="32 12" fill="none"/>
+            <text x="472" y="101" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="8" letter-spacing="0.8">APPS</text>
           </g>
 
-          <!-- 4. Cybersecurity Hobbyist Shield -->
+          <!-- 4. Cybersecurity hobby -->
           <g class="journey-step journey-shield">
             <path d="M616,24 l24,9 v18 c0,18 -24,29 -24,29 c0,0 -24,-11 -24,-29 v-18 z" fill="#b83832" fill-opacity="0.26" stroke="#df564e" stroke-width="2"/>
             <path d="M616,35 l12,5 v10 c0,10 -12,16 -12,16 c0,0 -12,-6 -12,-16 v-10 z" fill="#73a156" fill-opacity="0.28" stroke="#9fc28c" stroke-width="1.4"/>
             <circle cx="616" cy="50" r="3.5" fill="#f8fafc"/>
+            <text x="616" y="96" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="8" letter-spacing="0.8">SECURITY</text>
           </g>
         </svg>
       </div>
@@ -142,15 +158,18 @@
             <span class="tri-white">SKY COVER v1.5</span>
           </p>
           <span class="badge-pill">ANDROID &amp; WEAR OS</span>
-          <span class="release-pill" style="margin: 0; padding: 5px 11px; font-size: 11px;">
+        </div>
+        <h2 style="margin-top: 6px;">Introducing Sky Cover - Find shade wherever you are!</h2>
+        <p>Built for individuals managing migraines, photophobia, or sun sensitivities, as well as photographers, campers, and stargazers. Track live overhead cloud cover %, continuous shade windows, UV alerts, solar panel angles, hydration, and night-sky clarity in a calm, ultra-low-glare frosted glass interface.</p>
+        <div class="release-details">
+          <div class="release-pill">
             <span class="status-dot" aria-hidden="true"></span>
             <span>● Signed Release · SHA-256 Verified</span>
-          </span>
+          </div>
         </div>
-        <h2 style="margin-top: 6px;">Find comfort in the clouds &amp; plan around harsh sun.</h2>
-        <p>Built for individuals managing migraines, photophobia, or sun sensitivities, as well as photographers, campers, and stargazers. Track live overhead cloud cover %, continuous shade windows, UV alerts, solar panel angles, hydration, and night-sky clarity in a calm, ultra-low-glare frosted glass interface.</p>
         <div class="links" style="margin-top: 16px;">
           <a class="pill-link primary" href="https://github.com/pereralabs/pereralabs.github.io/releases/download/SkyCover1.5/skycover-release.apk" target="_blank" rel="noopener">⬇ Direct APK Download (v1.5)</a>
+          <a class="pill-link" href="apps.html#skycover-showcase">More Info and Showcase →</a>
           <a class="pill-link apk-download" href="apps.html#android-apps">Android Apps →</a>
           <a class="pill-link" href="apps.html#wearos-apps">Wear OS Apps →</a>
         </div>
@@ -164,6 +183,15 @@
     <article class="card journey-graphic-card">
       <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
       <div class="card-bg-scrim"></div>
+      <svg class="profile-sky-graphic android-sky-graphic" viewBox="0 0 360 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="190" cy="120" r="112" fill="#9fc28c" fill-opacity=".08"/>
+        <rect x="132" y="38" width="116" height="164" rx="22" fill="#132235" fill-opacity=".54" stroke="#9fc28c" stroke-opacity=".8" stroke-width="3"/>
+        <rect x="143" y="55" width="94" height="128" rx="12" fill="#080e18" fill-opacity=".8" stroke="#f8fafc" stroke-opacity=".45" stroke-width="1.5"/>
+        <circle cx="190" cy="169" r="5" fill="#df564e"/>
+        <path d="M156 133V103a15 15 0 0 1 30 0v30m-30-14h30m-4-16h16a14 14 0 0 1 0 28h-16" fill="none" stroke="#9fc28c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m66 120 29-29 28 29m-28-29v49m171-20 21-21 22 21m-22-21v36" fill="none" stroke="#f8fafc" stroke-opacity=".6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="66" cy="120" r="5" fill="#df564e"/><circle cx="294" cy="120" r="5" fill="#73a156"/>
+      </svg>
       <div class="card-content">
         <div class="card-header-row">
           <div class="icon">⌘</div>
@@ -199,6 +227,16 @@
     <article class="card journey-graphic-card">
       <div class="card-bg-layer" style="background-image: url('assets/bg_tab_settings.jpg');"></div>
       <div class="card-bg-scrim"></div>
+      <svg class="profile-sky-graphic systems-sky-graphic" viewBox="0 0 360 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="190" cy="120" r="112" fill="#f8fafc" fill-opacity=".07"/>
+        <rect x="121" y="39" width="118" height="42" rx="9" fill="#132235" fill-opacity=".72" stroke="#9bb8d0" stroke-opacity=".82" stroke-width="2.5"/>
+        <rect x="121" y="91" width="118" height="42" rx="9" fill="#132235" fill-opacity=".72" stroke="#9fc28c" stroke-opacity=".82" stroke-width="2.5"/>
+        <rect x="121" y="143" width="118" height="42" rx="9" fill="#132235" fill-opacity=".72" stroke="#df564e" stroke-opacity=".82" stroke-width="2.5"/>
+        <g fill="#9fc28c"><circle cx="139" cy="60" r="4"/><circle cx="139" cy="112" r="4"/><circle cx="139" cy="164" r="4"/></g>
+        <g stroke="#f8fafc" stroke-opacity=".78" stroke-width="3" stroke-linecap="round"><path d="M154 60h66M154 112h66M154 164h66"/></g>
+        <path d="M84 60h25v104H84m192-104h-25v104h25" fill="none" stroke="#f8fafc" stroke-opacity=".58" stroke-width="2.5"/>
+        <circle cx="84" cy="60" r="5" fill="#df564e"/><circle cx="276" cy="164" r="5" fill="#73a156"/>
+      </svg>
       <div class="card-content">
         <div class="card-header-row">
           <div class="icon">⚙</div>
@@ -235,6 +273,17 @@
     <article class="card journey-graphic-card">
       <div class="card-bg-layer" style="background-image: url('assets/bg_tab_outlook.jpg');"></div>
       <div class="card-bg-scrim"></div>
+      <svg class="profile-sky-graphic design-sky-graphic" viewBox="0 0 360 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="190" cy="120" r="112" fill="#df564e" fill-opacity=".06"/>
+        <path d="M69 145 121 77h118l52 68z" fill="#132235" fill-opacity=".66" stroke="#f8fafc" stroke-opacity=".72" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M95 143 133 91h93l39 52z" fill="#0b1524" fill-opacity=".86" stroke="#9fc28c" stroke-opacity=".8" stroke-width="2"/>
+        <path d="m115 143 29-52m29 52 9-52m27 52-9-52m35 52-29-52" stroke="#f8fafc" stroke-opacity=".45" stroke-width="1.5"/>
+        <circle cx="180" cy="118" r="20" fill="#df564e" fill-opacity=".72"/>
+        <circle cx="204" cy="118" r="20" fill="#73a156" fill-opacity=".72"/>
+        <circle cx="192" cy="98" r="19" fill="#f8fafc" fill-opacity=".68"/>
+        <path d="M180 169h29m-15-14v28" stroke="#9fc28c" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="82" cy="65" r="4" fill="#df564e"/><circle cx="283" cy="68" r="4" fill="#73a156"/>
+      </svg>
       <div class="card-content">
         <div class="card-header-row">
           <div class="icon">✦</div>
@@ -267,8 +316,22 @@
     </article>
 
     <article class="card journey-graphic-card">
-      <div class="card-bg-layer" style="background-image: url('assets/bg_tab_tools.jpg');"></div>
+      <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
       <div class="card-bg-scrim"></div>
+      <svg class="profile-sky-graphic wellness-sky-graphic" viewBox="0 0 360 240" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="wellness-sky-glow">
+            <stop offset="0" stop-color="#f8fafc" stop-opacity=".24"/>
+            <stop offset="1" stop-color="#f8fafc" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="194" cy="122" r="118" fill="url(#wellness-sky-glow)"/>
+        <path d="M190 198 96 118C40 66 114 21 161 66l29 28 29-28c47-45 121 0 65 52z" fill="#b83832" fill-opacity=".16" stroke="#df564e" stroke-opacity=".86" stroke-width="3"/>
+        <path d="M63 128h63l16-25 23 54 19-38 15 9h95" fill="none" stroke="#f8fafc" stroke-opacity=".94" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M244 57c5-25 28-38 52-34-1 24-19 42-49 42" fill="#73a156" fill-opacity=".55" stroke="#9fc28c" stroke-width="2.5"/>
+        <path d="M245 64 284 29" fill="none" stroke="#c0e2b0" stroke-width="2"/>
+        <circle cx="190" cy="122" r="105" fill="none" stroke="#f8fafc" stroke-opacity=".18" stroke-width="1.5"/>
+      </svg>
       <div class="card-content">
         <div class="card-header-row">
           <div class="icon">♡</div>
@@ -299,404 +362,7 @@
 
   </section>
 
-  <!-- Skills Section (#skills) — Modeled after ayan_portfolio_/#skills with Frosted Glass & Tri-Color Graphics -->
-  <section id="skills" class="skills-section">
-    <div class="section-heading skills-page-heading">
-      <div class="skills-heading-copy">
-      <p class="eyebrow">
-        <span class="tri-red">MY</span>
-        <span class="tri-sep">·</span>
-        <span class="tri-white">SKILL</span>
-        <span class="tri-sep">·</span>
-        <span class="tri-green">SET</span>
-      </p>
-      <h2>What I <span class="tri-red">work</span> <span class="tri-green">on</span></h2>
-      <p>A mix of creative media, design, software development, endpoint hardware diagnostics, network architecture, and defensive cybersecurity.</p>
-      </div>
-      <div class="skills-network-animation" aria-hidden="true">
-        <svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg">
-          <path class="skills-network-link" d="M75 48 158 84M75 152l83-36M202 84l83-36M202 116l83 36M180 64v-34M180 136v34" fill="none" stroke="#7494ae" stroke-width="2" stroke-dasharray="5 6" stroke-linecap="round"/>
-          <circle class="skills-network-packet" cx="75" cy="48" r="4" fill="#df564e"/>
-          <circle class="skills-network-packet skills-network-packet-delay" cx="75" cy="152" r="4" fill="#83b867"/>
-          <circle class="skills-network-packet skills-network-packet-third" cx="285" cy="48" r="4" fill="#83b867"/>
-          <circle class="skills-network-packet skills-network-packet-fourth" cx="285" cy="152" r="4" fill="#df564e"/>
-          <g class="skills-network-node skills-network-node-left">
-            <circle cx="58" cy="48" r="30" fill="#152336" stroke="#df564e" stroke-width="2"/>
-            <path d="M45 42h26M45 50h20M45 58h23" stroke="#f8fafc" stroke-width="2" stroke-linecap="round"/>
-            <text x="58" y="91" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="8">MEDIA</text>
-          </g>
-          <g class="skills-network-node skills-network-node-left-bottom">
-            <circle cx="58" cy="152" r="30" fill="#152336" stroke="#9fc28c" stroke-width="2"/>
-            <path d="M47 140h22v24H47zM52 146h12M52 151h12M52 156h8" fill="none" stroke="#9fc28c" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
-            <text x="58" y="193" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="8">DESIGN</text>
-          </g>
-          <g class="skills-network-core">
-            <rect x="150" y="65" width="60" height="70" rx="14" fill="#142923" stroke="#83b867" stroke-width="2.5"/>
-            <path d="m169 87-10 13 10 13M191 87l10 13-10 13M185 83l-10 34" fill="none" stroke="#f8fafc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="180" cy="100" r="47" fill="none" stroke="#9fc28c" stroke-opacity="0.22" stroke-width="1.5"/>
-          </g>
-          <g class="skills-network-node skills-network-node-right">
-            <circle cx="302" cy="48" r="30" fill="#152336" stroke="#9bb8d0" stroke-width="2"/>
-            <rect x="288" y="37" width="28" height="21" rx="3" fill="none" stroke="#f8fafc" stroke-width="1.8"/>
-            <path d="M294 64h16m-8-6v6" stroke="#9bb8d0" stroke-width="1.8" stroke-linecap="round"/>
-            <text x="302" y="91" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="8">SYSTEMS</text>
-          </g>
-          <g class="skills-network-node skills-network-node-right-bottom">
-            <circle cx="302" cy="152" r="30" fill="#152336" stroke="#9fc28c" stroke-width="2"/>
-            <path d="M302 134 315 139v10c0 9-13 17-13 17s-13-8-13-17v-10z" fill="#73a156" fill-opacity="0.3" stroke="#9fc28c" stroke-width="1.8"/>
-            <path d="m296 151 4 4 8-9" fill="none" stroke="#f8fafc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="302" y="194" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="8">SECURITY</text>
-          </g>
-        </svg>
-      </div>
-    </div>
 
-    <div class="skills-grid">
-
-      <!-- 1. Video Editing -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_night.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">🎬</div>
-            <span class="tag"><span class="tri-red">MOTION</span> · <span class="tri-white">CUTS</span> · <span class="tri-green">VFX</span></span>
-          </div>
-          <h3>Video Editing</h3>
-          <p>Transitions, timing, effects, and storytelling for digital videos, app promos, and visual showcases.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <!-- Timeline Tracks (Red, White, Green) -->
-              <rect x="18" y="14" width="110" height="8" rx="4" fill="#df564e" fill-opacity="0.82"/>
-              <rect x="136" y="14" width="84" height="8" rx="4" fill="#f8fafc" fill-opacity="0.75"/>
-              <rect x="44" y="28" width="142" height="8" rx="4" fill="#73a156" fill-opacity="0.88"/>
-              <rect x="194" y="28" width="96" height="8" rx="4" fill="#6485a0" fill-opacity="0.75"/>
-              <rect x="26" y="42" width="90" height="8" rx="4" fill="#f8fafc" fill-opacity="0.55"/>
-              <rect x="124" y="42" width="136" height="8" rx="4" fill="#9fc28c" fill-opacity="0.78"/>
-              <!-- Playhead -->
-              <line x1="164" y1="6" x2="164" y2="60" stroke="#df564e" stroke-width="2"/>
-              <polygon points="159,6 169,6 164,13" fill="#df564e"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 2. Photo Editing -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_outlook.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">📷</div>
-            <span class="tag"><span class="tri-red">COLOR</span> · <span class="tri-white">RAW</span> · <span class="tri-green">RETOUCH</span></span>
-          </div>
-          <h3>Photo Editing</h3>
-          <p>Image enhancement, color grading, creative compositions, and polished visuals for digital media.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <!-- RGB/Tone Histogram Curves -->
-              <path d="M16,54 Q65,12 115,44 T215,20 T304,52" stroke="#df564e" stroke-width="2" fill="none"/>
-              <path d="M16,54 Q85,22 145,34 T245,18 T304,52" stroke="#f8fafc" stroke-width="2" fill="none"/>
-              <path d="M16,54 Q95,38 165,16 T265,30 T304,52" stroke="#9fc28c" stroke-width="2.2" fill="none"/>
-              <circle cx="165" cy="23" r="4" fill="#9fc28c"/>
-              <circle cx="115" cy="44" r="3.5" fill="#df564e"/>
-              <circle cx="230" cy="21" r="3.5" fill="#f8fafc"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 3. Photoshop & Design -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">Ps</div>
-            <span class="tag"><span class="tri-red">BRANDING</span> · <span class="tri-white">UI</span> · <span class="tri-green">ASSETS</span></span>
-          </div>
-          <h3>Photoshop &amp; Design</h3>
-          <p>Thumbnails, posters, app icons, frosted glass UI graphics, and digital brand identity concepts.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <!-- Bezier Pen Path & Anchor Handles -->
-              <path d="M28,50 C90,10 230,10 292,50" stroke="#f8fafc" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
-              <line x1="95" y1="20" x2="225" y2="20" stroke="#9fc28c" stroke-width="1.5"/>
-              <circle cx="95" cy="20" r="4" fill="#df564e"/>
-              <circle cx="225" cy="20" r="4" fill="#9fc28c"/>
-              <rect x="155" y="15" width="10" height="10" rx="2" fill="#f8fafc" stroke="#6485a0" stroke-width="1.5"/>
-              <circle cx="28" cy="50" r="4" fill="#df564e"/>
-              <circle cx="292" cy="50" r="4" fill="#9fc28c"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 4. App Development -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_tools.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">App</div>
-            <span class="tag"><span class="tri-red">UX</span> · <span class="tri-white">ARCHITECTURE</span> · <span class="tri-green">SHIP</span></span>
-          </div>
-          <h3>App Development</h3>
-          <p>Turning real-world necessities into full-featured applications with intuitive interfaces and practical tools.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <rect x="24" y="12" width="76" height="42" rx="7" fill="#132235" stroke="#df564e" stroke-opacity="0.7" stroke-width="1.5"/>
-              <rect x="34" y="22" width="36" height="5" rx="2.5" fill="#f8fafc"/>
-              <rect x="34" y="32" width="52" height="5" rx="2.5" fill="#9bb8d0" fill-opacity="0.7"/>
-              <rect x="122" y="12" width="76" height="42" rx="7" fill="#132235" stroke="#f8fafc" stroke-opacity="0.65" stroke-width="1.5"/>
-              <circle cx="160" cy="33" r="11" stroke="#9fc28c" stroke-width="2" fill="none"/>
-              <rect x="220" y="12" width="76" height="42" rx="7" fill="#132235" stroke="#9fc28c" stroke-opacity="0.75" stroke-width="1.5"/>
-              <path d="M234,42 L250,26 L264,35 L282,20" stroke="#9fc28c" stroke-width="2" fill="none" stroke-linecap="round"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 5. API Development -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_settings.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">API</div>
-            <span class="tag"><span class="tri-red">REST</span> · <span class="tri-white">JSON</span> · <span class="tri-green">TELEMETRY</span></span>
-          </div>
-          <h3>API Development</h3>
-          <p>Connecting application services, live weather &amp; UV telemetry, maps, and real-time data pipelines.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <line x1="56" y1="33" x2="160" y2="18" stroke="#df564e" stroke-width="1.8" stroke-dasharray="4 3"/>
-              <line x1="56" y1="33" x2="160" y2="48" stroke="#f8fafc" stroke-width="1.8" stroke-dasharray="4 3"/>
-              <line x1="160" y1="18" x2="264" y2="33" stroke="#9fc28c" stroke-width="1.8" stroke-dasharray="4 3"/>
-              <line x1="160" y1="48" x2="264" y2="33" stroke="#9fc28c" stroke-width="1.8" stroke-dasharray="4 3"/>
-              <circle cx="56" cy="33" r="10" fill="#152336" stroke="#df564e" stroke-width="2"/>
-              <circle cx="160" cy="18" r="8" fill="#152336" stroke="#f8fafc" stroke-width="2"/>
-              <circle cx="160" cy="48" r="8" fill="#152336" stroke="#f8fafc" stroke-width="2"/>
-              <circle cx="264" cy="33" r="10" fill="#152336" stroke="#9fc28c" stroke-width="2"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 6. Android Development -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">And</div>
-            <span class="tag"><span class="tri-red">KOTLIN</span> · <span class="tri-white">SDK 36</span> · <span class="tri-green">PLAY</span></span>
-          </div>
-          <h3>Android Development</h3>
-          <p>Mobile interfaces, native Android &amp; Wear OS applications, Play Billing integration, and release workflows.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <!-- Android Bot Dome + Telemetry Bars -->
-              <path d="M42,46 a22,22 0 0,1 44,0 z" fill="#73a156" fill-opacity="0.38" stroke="#9fc28c" stroke-width="2"/>
-              <line x1="52" y1="28" x2="45" y2="17" stroke="#9fc28c" stroke-width="2" stroke-linecap="round"/>
-              <line x1="76" y1="28" x2="83" y2="17" stroke="#9fc28c" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="56" cy="36" r="2.2" fill="#f8fafc"/>
-              <circle cx="72" cy="36" r="2.2" fill="#f8fafc"/>
-              <rect x="116" y="20" width="110" height="7" rx="3.5" fill="#df564e" fill-opacity="0.85"/>
-              <rect x="116" y="32" width="146" height="7" rx="3.5" fill="#f8fafc" fill-opacity="0.85"/>
-              <rect x="116" y="44" width="174" height="7" rx="3.5" fill="#73a156"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 7. Windows Development -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_night.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">Win</div>
-            <span class="tag"><span class="tri-red">DESKTOP</span> · <span class="tri-white">PC</span> · <span class="tri-green">TOOLS</span></span>
-          </div>
-          <h3>Windows Development</h3>
-          <p>Exploring Windows desktop software, PC interfaces, automation scripts, and practical productivity utilities.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <!-- 4-Pane Window Grid + Terminal Prompt -->
-              <rect x="28" y="14" width="17" height="17" rx="3" fill="#df564e" fill-opacity="0.85"/>
-              <rect x="49" y="14" width="17" height="17" rx="3" fill="#73a156" fill-opacity="0.85"/>
-              <rect x="28" y="35" width="17" height="17" rx="3" fill="#6485a0" fill-opacity="0.9"/>
-              <rect x="49" y="35" width="17" height="17" rx="3" fill="#f8fafc" fill-opacity="0.85"/>
-              <rect x="92" y="14" width="200" height="38" rx="7" fill="#132235" stroke="#9bb8d0" stroke-opacity="0.45"/>
-              <path d="M106,28 l7,5 l-7,5" stroke="#9fc28c" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <line x1="120" y1="33" x2="188" y2="33" stroke="#f8fafc" stroke-width="2.2" stroke-linecap="round"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 8. Wear OS & Smartwatch Dev -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_outlook.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">⌚</div>
-            <span class="tag"><span class="tri-red">WRIST</span> · <span class="tri-white">SENSORS</span> · <span class="tri-green">SYNC</span></span>
-          </div>
-          <h3>Wear OS &amp; Watch Apps</h3>
-          <p>Discreet wrist-first triggers, phone-watch Data Layer sync, and glanceable health &amp; cloud tracking on Wear OS.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <circle cx="64" cy="33" r="20" fill="#132235" stroke="#f8fafc" stroke-opacity="0.7" stroke-width="1.8"/>
-              <circle cx="64" cy="33" r="13" stroke="#9fc28c" stroke-width="2" stroke-dasharray="48 18" fill="none"/>
-              <path d="M104,33 C140,14 180,52 216,33" stroke="#df564e" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
-              <rect x="232" y="13" width="60" height="40" rx="7" fill="#132235" stroke="#9fc28c" stroke-opacity="0.75" stroke-width="1.6"/>
-              <circle cx="262" cy="33" r="6" fill="#73a156"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 9. System Administration -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_settings.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">Sys</div>
-            <span class="tag"><span class="tri-red">LINUX</span> · <span class="tri-white">INFRA</span> · <span class="tri-green">UPTIME</span></span>
-          </div>
-          <h3>System Administration</h3>
-          <p>Managing multi-OS environments, Active Directory &amp; group policies, virtualization hypervisors, and high-availability services.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <rect x="22" y="15" width="110" height="15" rx="4" fill="#152336" stroke="#f8fafc" stroke-opacity="0.4"/>
-              <circle cx="34" cy="22.5" r="3" fill="#df564e"/>
-              <circle cx="45" cy="22.5" r="3" fill="#f8fafc"/>
-              <circle cx="56" cy="22.5" r="3" fill="#9fc28c"/>
-              <rect x="22" y="36" width="110" height="15" rx="4" fill="#152336" stroke="#9fc28c" stroke-opacity="0.5"/>
-              <circle cx="34" cy="43.5" r="3" fill="#9fc28c"/>
-              <circle cx="45" cy="43.5" r="3" fill="#f8fafc"/>
-              <circle cx="56" cy="43.5" r="3" fill="#df564e"/>
-              <path d="M156,35 h32 l8,-15 l11,30 l9,-21 l7,6 h68" stroke="#9fc28c" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 10. Hardware & Endpoint Diagnostics (A+ Domain Knowledge) -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_tools.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">HW</div>
-            <span class="tag"><span class="tri-red">BIOS/UEFI</span> · <span class="tri-white">PC &amp; MOBILE</span> · <span class="tri-green">REPAIR</span></span>
-          </div>
-          <h3>Hardware &amp; Endpoint Systems</h3>
-          <p>Component-level PC &amp; mobile diagnostics, BIOS/UEFI firmware tuning, RAID &amp; NVMe storage provisioning, and cross-platform OS imaging.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <!-- CPU Die & Circuit Traces -->
-              <rect x="44" y="15" width="36" height="36" rx="5" fill="#132235" stroke="#df564e" stroke-width="1.8"/>
-              <rect x="53" y="24" width="18" height="18" rx="2" fill="#df564e" fill-opacity="0.4" stroke="#f8fafc" stroke-width="1.2"/>
-              <line x1="36" y1="22" x2="44" y2="22" stroke="#f8fafc" stroke-width="2"/>
-              <line x1="36" y1="33" x2="44" y2="33" stroke="#f8fafc" stroke-width="2"/>
-              <line x1="36" y1="44" x2="44" y2="44" stroke="#f8fafc" stroke-width="2"/>
-              <line x1="80" y1="22" x2="132" y2="22" stroke="#9fc28c" stroke-width="1.8"/>
-              <line x1="80" y1="33" x2="152" y2="33" stroke="#f8fafc" stroke-width="1.8"/>
-              <line x1="80" y1="44" x2="132" y2="44" stroke="#df564e" stroke-width="1.8"/>
-              <!-- NVMe / Memory Bus Modules -->
-              <rect x="168" y="16" width="124" height="14" rx="3" fill="#152336" stroke="#9fc28c" stroke-opacity="0.65" stroke-width="1.4"/>
-              <rect x="176" y="20" width="16" height="6" rx="1" fill="#73a156"/>
-              <rect x="198" y="20" width="16" height="6" rx="1" fill="#73a156"/>
-              <rect x="220" y="20" width="16" height="6" rx="1" fill="#73a156"/>
-              <rect x="168" y="36" width="124" height="14" rx="3" fill="#152336" stroke="#f8fafc" stroke-opacity="0.5" stroke-width="1.4"/>
-              <rect x="176" y="40" width="16" height="6" rx="1" fill="#6485a0"/>
-              <rect x="198" y="40" width="16" height="6" rx="1" fill="#6485a0"/>
-              <rect x="220" y="40" width="16" height="6" rx="1" fill="#df564e"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 11. Network Architecture & Routing (Network+ Domain Knowledge) -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">Net</div>
-            <span class="tag"><span class="tri-red">TCP/IP</span> · <span class="tri-white">VLANS</span> · <span class="tri-green">ROUTING</span></span>
-          </div>
-          <h3>Network Architecture &amp; Routing</h3>
-          <p>OSI &amp; TCP/IP stack analysis, IPv4/IPv6 subnetting, VLAN trunking, DNS/DHCP, VPN tunneling, Wi-Fi RF optimization, and packet inspection.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <!-- Router / Switch Topology & Subnet Links -->
-              <line x1="56" y1="33" x2="146" y2="18" stroke="#f8fafc" stroke-width="1.8"/>
-              <line x1="56" y1="33" x2="146" y2="48" stroke="#9fc28c" stroke-width="1.8"/>
-              <line x1="170" y1="18" x2="262" y2="20" stroke="#df564e" stroke-width="1.8" stroke-dasharray="4 3"/>
-              <line x1="170" y1="48" x2="262" y2="46" stroke="#9fc28c" stroke-width="1.8" stroke-dasharray="4 3"/>
-              <!-- Core Gateway Node -->
-              <circle cx="56" cy="33" r="14" fill="#152336" stroke="#f8fafc" stroke-width="1.8"/>
-              <path d="M50,33 h12 M56,27 v12" stroke="#9fc28c" stroke-width="1.8" stroke-linecap="round"/>
-              <!-- VLAN Switches -->
-              <rect x="142" y="11" width="32" height="14" rx="4" fill="#152336" stroke="#df564e" stroke-width="1.6"/>
-              <rect x="142" y="41" width="32" height="14" rx="4" fill="#152336" stroke="#9fc28c" stroke-width="1.6"/>
-              <!-- Endpoint Subnets -->
-              <circle cx="268" cy="20" r="7" fill="#df564e" fill-opacity="0.35" stroke="#df564e" stroke-width="1.6"/>
-              <circle cx="268" cy="46" r="7" fill="#73a156" fill-opacity="0.35" stroke="#9fc28c" stroke-width="1.6"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-      <!-- 12. Cybersecurity & Threat Defense (Cybersecurity Student / Hobbyist) -->
-      <article class="skill-card">
-        <div class="card-bg-layer" style="background-image: url('assets/bg_tab_night.jpg');"></div>
-        <div class="card-bg-scrim"></div>
-        <div class="card-content">
-          <div class="skill-top-row">
-            <div class="skill-icon" aria-hidden="true">Sec</div>
-            <span class="tag"><span class="tri-red">DEFENSE</span> · <span class="tri-white">SIEM</span> · <span class="tri-green">HARDENING</span></span>
-          </div>
-          <h3>Cybersecurity &amp; Threat Defense</h3>
-          <p>Exploring vulnerability assessment, firewall &amp; ACL rulesets, SIEM log analysis, cryptographic protocols, zero-trust hardening, and home-lab threat hunting.</p>
-          <div class="skill-graphic" aria-hidden="true">
-            <svg viewBox="0 0 320 66" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-              <rect width="320" height="66" fill="#09111e" fill-opacity="0.75"/>
-              <!-- Security Shield + Lock Crest -->
-              <path d="M58,12 l18,6 v14 c0,13 -18,21 -18,21 c0,0 -18,-8 -18,-21 v-14 z" fill="#73a156" fill-opacity="0.28" stroke="#9fc28c" stroke-width="1.8"/>
-              <circle cx="58" cy="31" r="4" fill="#f8fafc"/>
-              <!-- Firewall Inspection Bars & Threat Radar -->
-              <rect x="104" y="18" width="96" height="6" rx="3" fill="#9fc28c" fill-opacity="0.85"/>
-              <rect x="104" y="30" width="124" height="6" rx="3" fill="#f8fafc" fill-opacity="0.8"/>
-              <rect x="104" y="42" width="76" height="6" rx="3" fill="#df564e" fill-opacity="0.88"/>
-              <circle cx="268" cy="33" r="18" stroke="#9fc28c" stroke-opacity="0.55" stroke-width="1.5" fill="none"/>
-              <circle cx="268" cy="33" r="10" stroke="#f8fafc" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="4 3" fill="none"/>
-              <line x1="268" y1="33" x2="281" y2="21" stroke="#df564e" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="276" cy="25" r="2.5" fill="#df564e"/>
-            </svg>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
 </main>
 
 <footer>

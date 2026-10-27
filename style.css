@@ -449,6 +449,32 @@ h1 .accent-steel {
   background: linear-gradient(135deg, rgba(10, 18, 30, 0.64) 0%, rgba(15, 25, 40, 0.44) 50%, rgba(12, 24, 20, 0.62) 100%);
 }
 
+.profile-sky-graphic {
+  position: absolute;
+  z-index: 1;
+  top: 8%;
+  right: 0;
+  width: 48%;
+  height: 43%;
+  pointer-events: none;
+  opacity: 0.62;
+  filter: drop-shadow(0 0 16px rgba(159, 194, 140, 0.22));
+}
+
+.wellness-sky-graphic {
+  width: 50%;
+  height: 46%;
+  opacity: 0.7;
+}
+
+.systems-sky-graphic {
+  opacity: 0.58;
+}
+
+.design-sky-graphic {
+  opacity: 0.64;
+}
+
 .card-content {
   position: relative;
   z-index: 2;
@@ -641,6 +667,49 @@ h1 .accent-steel {
   padding: 36px;
 }
 
+.mission-about {
+  grid-template-columns: 164px minmax(0, 1fr);
+}
+
+.about-family-portraits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  justify-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.about-portrait {
+  margin: 0;
+  text-align: center;
+  color: var(--steel-light);
+  font: 600 10px/1.2 'DM Mono', monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.about-portrait img {
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 7px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 35%;
+  border: 2px solid rgba(159, 194, 140, 0.72);
+  box-shadow: 0 0 0 3px rgba(10, 18, 30, 0.72), 0 5px 16px rgba(0, 0, 0, 0.4);
+}
+
+.about-portrait-heart img {
+  width: 144px;
+  height: 144px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.48));
+}
+
 .mission-mark {
   width: 56px;
   height: 56px;
@@ -654,20 +723,6 @@ h1 .accent-steel {
   position: relative;
   z-index: 2;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
-}
-
-.mission-mark.about-profile {
-  overflow: hidden;
-  padding: 0;
-  border-radius: 50%;
-}
-
-.about-profile img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
 }
 
 .mission h2 {
@@ -686,8 +741,38 @@ h1 .accent-steel {
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
   gap: 20px;
   margin-top: 20px;
+  align-items: stretch;
+}
+
+.profile-grid > .journey-graphic-card {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+}
+
+.profile-grid > .journey-graphic-card > .card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-grid > .journey-graphic-card > .card-content > .card-header-row,
+.profile-grid > .journey-graphic-card > .card-content > h2,
+.profile-grid > .journey-graphic-card > .card-content > p {
+  margin: 0;
+}
+
+.profile-grid > .journey-graphic-card > .card-content > .card-header-row {
+  margin-bottom: 4px;
+}
+
+.profile-grid > .journey-graphic-card > .card-content > p {
+  flex: 1;
+  min-height: 0;
 }
 
 .current-feature-section {
@@ -696,6 +781,17 @@ h1 .accent-steel {
 
 .current-feature-section > .section-heading {
   margin-bottom: 18px;
+}
+
+.release-details {
+  margin-top: 14px;
+}
+
+.bento-grid.contact-bento-grid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "hero hero"
+    "stack arch";
 }
 
 .current-feature-section > .section-heading h2 {
@@ -768,7 +864,9 @@ h1 .accent-steel {
 .card-graphic-banner {
   width: 100%;
   height: 112px;
-  margin: 16px 0 6px;
+  flex: 0 0 96px;
+  height: 96px;
+  margin: 4px 0 0;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid rgba(155, 184, 208, 0.22);
@@ -868,90 +966,59 @@ h1 .accent-steel {
    Skills Section (#skills) — 3-Column Frosted Glass Grid (Tri-Color Accents)
    ========================================================================== */
 .skills-section {
-  margin-top: 68px;
+  margin-top: 0;
   scroll-margin-top: 96px;
 }
 
-.section-heading {
+.skills-category-line {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-top: 18px;
 }
 
-.skills-page-heading {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 360px);
-  align-items: center;
-  gap: 32px;
-}
-
-.skills-heading-copy {
-  min-width: 0;
-}
-
-.skills-network-animation {
-  width: min(100%, 180px);
+.skills-toolkit-animation {
+  width: min(100%, 360px);
   justify-self: center;
-  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
 }
 
-.skills-network-animation svg {
+.skills-toolkit-animation svg {
   display: block;
   width: 100%;
   overflow: visible;
 }
 
-.skills-network-link {
-  animation: skills-network-flow 2.4s linear infinite;
-}
-
-.skills-network-packet {
-  animation: portfolio-sync-pulse 1.8s ease-in-out infinite;
-}
-
-.skills-network-packet-delay { animation-delay: 0.45s; }
-.skills-network-packet-third { animation-delay: 0.9s; }
-.skills-network-packet-fourth { animation-delay: 1.35s; }
-
-.skills-network-node {
+.skills-toolkit-card {
   transform-box: fill-box;
   transform-origin: center;
-  animation: portfolio-device-float 3.4s ease-in-out infinite;
+  animation: skills-toolkit-float 3.6s ease-in-out infinite;
 }
 
-.skills-network-node-left-bottom { animation-delay: -0.85s; }
-.skills-network-node-right { animation-delay: -1.7s; }
-.skills-network-node-right-bottom { animation-delay: -2.55s; }
-
-.skills-network-core {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: skills-network-core-pulse 2.8s ease-in-out infinite;
+.skills-toolkit-code {
+  animation-delay: -1.2s;
 }
 
-@keyframes skills-network-flow {
-  to { stroke-dashoffset: -44; }
+.skills-toolkit-systems {
+  animation-delay: -2.4s;
 }
 
-@keyframes skills-network-core-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+.skills-toolkit-packet {
+  animation: skills-toolkit-flow 1.8s ease-in-out infinite;
 }
 
-.section-heading h2 {
-  margin: 0;
-  font-size: clamp(28px, 4vw, 42px);
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-  color: var(--white-pure);
+.skills-toolkit-packet-delay {
+  animation-delay: 0.9s;
 }
 
-.section-heading p:not(.eyebrow) {
-  margin: 0;
-  color: var(--muted);
-  max-width: 64ch;
-  font-size: 16.5px;
+@keyframes skills-toolkit-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes skills-toolkit-flow {
+  0%, 100% { opacity: 0.3; transform: translateX(0) scale(0.75); }
+  50% { opacity: 1; transform: translateX(34px) scale(1.25); }
 }
 
 .skills-grid {
@@ -1054,7 +1121,7 @@ h1 .accent-steel {
 .contact-page-head {
   max-width: 1140px;
   display: grid;
-  grid-template-columns: minmax(0, 840px) minmax(180px, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
   align-items: center;
   gap: 32px;
 }
@@ -1064,7 +1131,7 @@ h1 .accent-steel {
 }
 
 .contact-mail-animation {
-  width: min(100%, 260px);
+  width: min(100%, 340px);
   justify-self: center;
   filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
 }
@@ -1418,6 +1485,67 @@ h1 .accent-steel {
 
 .bento-stack {
   grid-area: stack;
+}
+
+.skycover-grid .bento-stack {
+  padding: 18px;
+}
+
+.skycover-grid .stack-panel-heading {
+  margin: 0 0 12px;
+  color: var(--white-pure);
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.skycover-grid .bento-stack .tech-badge-grid {
+  gap: 7px;
+  margin-top: 0;
+}
+
+.skycover-grid .bento-stack .tech-badge {
+  padding: 6px 9px;
+  font-size: 10px;
+}
+
+.skycover-grid .stack-compact-meta {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font: 11.5px/1.5 'DM Mono', monospace;
+}
+
+.skycover-grid {
+  grid-template-areas:
+    "hero stack"
+    "hero features"
+    "hero release"
+    "arch arch";
+}
+
+.skycover-grid .bento-features {
+  grid-area: features;
+  padding: 22px;
+}
+
+.skycover-grid .feature-summary-lines {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 14px;
+}
+
+.skycover-grid .feature-summary-lines p {
+  margin: 0;
+  padding-left: 12px;
+  border-left: 2px solid rgba(159, 194, 140, 0.62);
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.skycover-grid .feature-summary-lines strong {
+  color: var(--green-light);
+  font-weight: 700;
 }
 
 .bento-release {
@@ -2023,12 +2151,39 @@ footer a:hover {
       "release"
       "arch";
   }
+  .bento-grid.contact-bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "stack"
+      "arch";
+  }
+  .bento-grid.skycover-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    grid-template-areas:
+      "hero stack"
+      "hero features"
+      "hero release"
+      "arch";
+  }
   .arch-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 760px) {
+  .bento-grid.skycover-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "hero"
+      "stack"
+      "features"
+      "release"
+      "arch";
+  }
+  .skycover-grid .feature-summary-lines {
+    grid-template-columns: 1fr;
+  }
   .hero,
   .page {
     padding-top: 48px;
@@ -2042,12 +2197,8 @@ footer a:hover {
     grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
-  .skills-page-heading {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-  }
-  .skills-network-animation {
-    width: 140px;
+  .skills-page-head .skills-toolkit-animation {
+    width: 280px;
     justify-self: end;
     margin-top: -14px;
     margin-bottom: -20px;
@@ -2059,7 +2210,7 @@ footer a:hover {
     margin-bottom: -20px;
   }
   .contact-mail-animation {
-    width: 160px;
+    width: min(100%, 240px);
     justify-self: end;
     margin-top: -18px;
     margin-bottom: -20px;
@@ -2072,6 +2223,12 @@ footer a:hover {
     grid-template-columns: 1fr;
     padding: 26px;
     margin-top: 48px;
+  }
+  .mission-about {
+    grid-template-columns: 176px minmax(0, 1fr);
+  }
+  .about-family-portraits {
+    grid-template-columns: 1fr;
   }
   .app-card {
     flex-direction: column;
@@ -2090,5 +2247,23 @@ footer a:hover {
   .nav > div a {
     padding: 7px 12px;
     font-size: 13px;
+  }
+}
+
+@media (max-width: 560px) {
+  .mission-about {
+    grid-template-columns: 1fr;
+  }
+  .about-family-portraits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+  .about-portrait img {
+    width: 68px;
+    height: 68px;
+  }
+  .about-portrait-heart img {
+    width: 112px;
+    height: 112px;
   }
 }
