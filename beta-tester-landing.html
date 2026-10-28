@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sky Cover Beta — Join the Testing Group</title>
+  <meta name="description" content="Join the Sky Cover beta testers group, then install the Android app.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Mono:wght@500&family=Inter:wght@400;500;600;700;800&family=Roboto+Slab:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080e18;--text:#f8fafc;--muted:#cbd5e1;--steel:#9bb8d0;--red:#df564e;--green:#9fc28c;--line:rgba(155,184,208,.26);--surface:rgba(13,21,35,.82)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Inter,system-ui,sans-serif;background-color:var(--bg);background-image:linear-gradient(180deg,rgba(8,14,24,.64),rgba(10,17,29,.78),rgba(8,14,24,.90)),radial-gradient(circle at 15% 15%,rgba(184,56,50,.18),transparent 42%),radial-gradient(circle at 50% 12%,rgba(100,133,160,.22),transparent 45%),radial-gradient(circle at 85% 18%,rgba(115,161,86,.22),transparent 44%),url('assets/bg_tab_shade.jpg');background-size:cover;background-position:center top;background-attachment:fixed}
+    a{color:inherit;text-decoration:none}.container{width:min(1140px,calc(100% - 48px));margin:auto}
+    .nav-wrap{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,rgba(22,36,54,.72),rgba(8,14,24,.34));-webkit-backdrop-filter:blur(30px) saturate(180%);backdrop-filter:blur(30px) saturate(180%);border-bottom:1px solid rgba(219,228,238,.24);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 8px 32px rgba(2,6,23,.42)}
+    .nav-wrap::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 2%,var(--red) 20%,var(--text) 50%,var(--green) 80%,transparent 98%)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between}.nav>div{display:flex;align-items:center;gap:10px}.brand{display:inline-flex;align-items:baseline;gap:10px;font-family:'Roboto Slab','Alfa Slab One',Georgia,serif;font-weight:900;font-size:25px;letter-spacing:.06em;text-transform:uppercase}.brand .perera-steel{color:#9bb8d0;background:linear-gradient(180deg,#b8d0e4,#7494ae 48%,#4d6a82);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:.8px rgba(184,208,228,.55);filter:drop-shadow(0 2px 0 #263849)}.brand .labs-red{color:#df564e;background:linear-gradient(180deg,#ec6860,#b83832 48%,#7a201b);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:.8px rgba(236,104,96,.55);filter:drop-shadow(0 2px 0 #42110e)}.nav>div a{color:var(--muted);font-size:14px;font-weight:600;padding:8px 16px;border-radius:999px;border:1px solid transparent}.nav>div a:hover{color:var(--text);background:rgba(155,184,208,.14);border-color:rgba(159,194,140,.35)}
+    main{padding:64px 0}.hero{display:grid;grid-template-columns:.86fr 1.14fr;gap:52px;align-items:center}.eyebrow{color:var(--green);font:500 12px 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase}
+    h1{margin:12px 0 20px;font-size:clamp(46px,7vw,76px);line-height:.98;letter-spacing:-.045em}h1 em{color:var(--green);font-style:normal}.lead{max-width:570px;color:var(--muted);font-size:18px;line-height:1.65}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:1px solid var(--line);border-radius:999px;font-weight:800;font-size:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 12px 30px rgba(0,0,0,.25)}
+    .button.primary{background:linear-gradient(135deg,#73a156,#4e8038);border-color:rgba(159,194,140,.65)}.button.secondary{background:rgba(15,24,40,.8)}.button:hover{transform:translateY(-2px)}.note{display:block;margin-top:14px;color:var(--muted);font-size:12px}
+    .demo-shell{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:var(--surface);box-shadow:0 28px 70px rgba(0,0,0,.45);backdrop-filter:blur(20px)}
+    .browser-bar{height:42px;display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:1px solid var(--line);background:rgba(22,36,54,.8)}.dot{width:9px;height:9px;border-radius:50%;background:#6485a0}.dot:nth-child(1){background:var(--red)}.dot:nth-child(3){background:var(--green)}.address{flex:1;margin-left:8px;padding:6px 12px;border-radius:6px;color:#9dabbc;background:#09131c;font:500 10px 'DM Mono',monospace}
+    .demo-stage{position:relative;height:430px;overflow:hidden;background:linear-gradient(145deg,#101d2e,#080e18)}.scene{position:absolute;inset:0;opacity:0;display:flex;align-items:center;justify-content:center;padding:28px;animation:scene 12s infinite}.scene-one{animation-delay:0s}.scene-two{animation-delay:4s}.scene-three{animation-delay:8s}
+    @keyframes scene{0%,20%{opacity:0;transform:translateX(22px)}4%,29%{opacity:1;transform:none}31%,100%{opacity:0;transform:translateX(-22px)}}
+    .group-card,.store-card{width:88%;border:1px solid var(--line);border-radius:18px;padding:28px;background:rgba(8,14,24,.92);box-shadow:0 22px 50px rgba(0,0,0,.32)}.group-logo{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;color:white;background:linear-gradient(135deg,var(--steel),var(--green))}.group-card h2,.store-card h2{margin:18px 0 8px}.group-card p,.store-card p{color:var(--muted)}
+    .demo-stage video{display:block;width:100%;height:100%;object-fit:contain;background:#080e18}.demo-stage .video-label{position:absolute;left:14px;bottom:14px;padding:7px 10px;border-radius:999px;background:rgba(8,14,24,.86);font:500 10px 'DM Mono',monospace;letter-spacing:.08em;pointer-events:none}
+    .fake-button{display:inline-block;margin-top:10px;padding:10px 18px;border-radius:999px;background:#3184f4;font-size:13px;font-weight:800;animation:buttonPulse 12s infinite}.fake-button.green{background:var(--green-dark)}
+    @keyframes buttonPulse{0%,4%,31%,100%{box-shadow:none}8%,25%{box-shadow:0 0 0 8px rgba(159,194,140,.18)}}
+    .cursor{position:absolute;width:18px;height:18px;left:-40px;top:-30px;background:white;clip-path:polygon(0 0,0 100%,38% 68%,58% 100%,72% 91%,52% 62%,100% 58%);filter:drop-shadow(0 3px 3px #000);animation:cursor 12s infinite}
+    @keyframes cursor{0%,7%{transform:translate(20px,240px)}12%,24%{transform:translate(330px,310px)}28%{transform:translate(330px,310px);opacity:1}32%,100%{transform:translate(330px,310px);opacity:0}}
+    .phone-mini{width:148px;height:290px;margin:auto;padding:14px;border:7px solid #243548;border-radius:28px;background:#080e18;box-shadow:0 24px 50px rgba(0,0,0,.5)}.phone-screen{height:100%;display:grid;place-items:center;text-align:center;border-radius:15px;background:radial-gradient(circle,#1b2d28,#09131c)}.app-mark{width:76px;height:76px;display:grid;place-items:center;margin:0 auto 18px;border-radius:22px;background:linear-gradient(135deg,var(--steel),var(--green));font-size:32px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:86px}.step{padding:24px;border:1px solid var(--line);border-radius:20px;background:rgba(13,21,35,.68)}.step-number{color:var(--green);font:500 12px 'DM Mono',monospace}.step h2{font-size:20px;margin:14px 0 8px}.step p{margin:0;color:var(--muted);font-size:14px}.step:first-child{border-color:rgba(223,86,78,.45)}.step:last-child{border-color:rgba(159,194,140,.45)}
+    .troubleshooting{margin-top:76px}.troubleshooting-head{max-width:760px;margin-bottom:24px}.troubleshooting-head h2{margin:8px 0;font-size:42px}.troubleshooting-head p{color:var(--muted)}
+    .troubleshooting-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.screenshot-card{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:rgba(13,21,35,.72)}.screenshot-card.wide{grid-column:1/-1}.screenshot-card img{display:block;width:100%;border-bottom:1px solid var(--line)}.caption{padding:20px}.caption strong{color:var(--green)}.caption p{margin:8px 0 0;color:var(--muted);font-size:14px}
+    footer{margin-top:72px;padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.demo-stage{height:400px}.steps{grid-template-columns:1fr;margin-top:52px}.troubleshooting-grid{grid-template-columns:1fr}.screenshot-card.wide{grid-column:auto}}
+    @media(max-width:600px){.container{width:calc(100% - 28px)}main{padding-top:42px}.nav a:last-child{display:none}.demo-stage{height:350px}.group-card,.store-card{width:100%;padding:20px}.actions .button{width:100%}.footer-inner{gap:12px;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){.scene,.cursor,.fake-button{animation:none}.scene-one{opacity:1}.scene-two,.scene-three{display:none}.cursor{display:none}}
+  </style>
+</head>
+<body>
+  <header class="nav-wrap">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="perera-steel">PERERA</span><span class="labs-red">LABS</span></a>
+      <div><a href="index.html">About</a><a href="skills.html">Skills</a><a href="apps.html">Portfolio</a><a href="contact.html">Contact</a></div>
+    </nav>
+  </header>
+  <main>
+    <div class="container hero">
+      <section>
+        <p class="eyebrow">PRIVATE BETA ACCESS</p>
+        <h1>Help shape <em>Sky Cover.</em></h1>
+        <p class="lead">Join the Google Group to request beta access, then return to Google Play and install the latest Sky Cover build.</p>
+        <div class="actions">
+          <a class="button primary" href="https://groups.google.com/g/sky-cover-beta-testers" target="_blank" rel="noopener">1. Join the Google Group</a>
+          <a class="button secondary" href="https://play.google.com/apps/testing/com.pereralabs.skycover" target="_blank" rel="noopener">2. Install Sky Cover</a>
+        </div>
+        <small class="note">Use the same Google account for both steps.</small>
+      </section>
+      <section class="demo-shell" aria-label="Animated walkthrough of joining the beta group and installing the app">
+        <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="address">skycover / beta setup</span></div>
+        <div class="demo-stage">
+          <video controls preload="metadata" playsinline poster="assets/beta-play-error-annotated.png">
+            <source src="assets/sky-cover-beta-walkthrough.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+          </video>
+          <span class="video-label">BETA ENROLLMENT WALKTHROUGH</span>
+        </div>
+      </section>
+    </div>
+    <section class="container steps" aria-label="Beta enrollment steps">
+      <article class="step"><span class="step-number">01 / JOIN</span><h2>Join the group</h2><p>Open Google Groups and use “Ask to join group.” Sign in with the account on your Android phone.</p></article>
+      <article class="step"><span class="step-number">02 / ACCEPT</span><h2>Wait for approval</h2><p>Your invitation may require manual approval. Group updates will confirm when your membership is active.</p></article>
+      <article class="step"><span class="step-number">03 / INSTALL</span><h2>Become a tester</h2><p>Open the Play Store testing link, accept the invitation, then choose Install.</p></article>
+    </section>
+
+    <section class="troubleshooting" aria-labelledby="troubleshooting-title">
+      <div class="troubleshooting-head">
+        <p class="eyebrow">WHY THE ERROR PAGE APPEARS</p>
+        <h2 id="troubleshooting-title">Complete both invitations first.</h2>
+        <p>Google Play and Google Groups use separate access checks. Joining one does not automatically activate the other, and Play must recognise the exact Google account signed in on the Android device.</p>
+      </div>
+      <div class="troubleshooting-grid">
+        <article class="screenshot-card wide">
+          <img src="assets/beta-play-error-annotated.png" alt="Play Store test invitation page with the account requirement highlighted">
+          <div class="caption"><strong>Play Store “App not available” page</strong><p>This usually appears before the tester has joined the Google Group or accepted the Play testing invitation. Press the Play Store testing link again only after the group membership is approved, and confirm that Play Store shows the same Google account named in the invitation.</p></div>
+        </article>
+        <article class="screenshot-card">
+          <img src="assets/beta-group-error-annotated.png" alt="Google Group joined page with Join group highlighted">
+          <div class="caption"><strong>1 — Press “Join group”</strong><p>In the Google Group header, press the outlined Join group button. If approval is restricted, you may instead see Ask to join group; submit that request and wait for approval.</p></div>
+        </article>
+        <article class="screenshot-card">
+          <img src="assets/beta-group-error-2-annotated.png" alt="Google Group restricted content with joining link highlighted">
+          <div class="caption"><strong>2 — Use the joining link</strong><p>The permission page means you are trying to view a member-only area before access is granted. Press “joining the group” rather than trying to open conversations directly. Reload the Play link after approval.</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><span>Sky Cover beta program</span><span>Questions? Use the Google Group</span></div></footer>
+</body>
+</html>
