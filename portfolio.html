@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio | PERERA LABS — Android &amp; Wear OS Showcases</title>
-  <meta name="description" content="Interactive Android and Wear OS app portfolio by Perera Labs, featuring side-by-side device mockups, Bento grid architecture, and SHA-256 verified releases.">
+  <title>Portfolio | PERERA LABS — Windows, Android &amp; Wear OS Apps</title>
+  <meta name="description" content="Perera Labs app portfolio featuring Windows desktop software, Android apps, Wear OS showcases, and verified releases.">
   <link rel="icon" type="image/png" href="assets/skycover-logo.png">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -34,8 +34,9 @@
         <span class="tri-green">INNOVATION</span>
       </p>
       <h1>Portfolio built to make <span class="accent-red">everyday</span> <span class="accent-white">life</span> <span class="accent-green">a little better.</span></h1>
-      <p class="lead">Explore interactive Android &amp; Wear OS device showcases, technical architecture highlights, and SHA-256 verified release builds engineered around real-world sensory health, personal safety, and everyday resilience.</p>
+      <p class="lead">Explore Windows desktop software alongside interactive Android &amp; Wear OS device showcases, technical architecture highlights, and verified release builds engineered around real-world media, health, personal safety, and everyday productivity.</p>
       <div class="buttons" style="margin-top: 24px;">
+        <a class="button primary" href="#windows-apps">🖥 Windows Apps ↓</a>
         <a class="button primary" href="#android-apps">📱 Android Apps ↓</a>
         <a class="button apk-download" href="#wearos-apps">⌚ Wear OS Apps ↓</a>
       </div>
@@ -76,7 +77,64 @@
     </div>
   </header>
 
-  
+  <section id="windows-apps" class="portfolio-section desktop-section">
+    <div class="portfolio-section-header">
+      <div>
+        <p class="eyebrow"><span class="tri-red">SECTION 01</span><span class="tri-sep">·</span><span class="tri-white">WINDOWS DESKTOP SOFTWARE</span></p>
+        <h2>🖥 Windows <span class="tri-green">Desktop Apps</span></h2>
+        <p>Native Windows utilities with focused workflows, practical tooling, and the Perera Labs identity.</p>
+      </div>
+      <span class="badge-pill">WINDOWS 11 · NATIVE DESKTOP</span>
+    </div>
+
+    <article class="desktop-showcase">
+      <div class="desktop-showcase-copy">
+        <div class="desktop-app-heading">
+          <img src="assets/voicesync-logo.png" alt="VoiceSync Studio logo" class="desktop-app-logo">
+          <div><p class="desktop-app-kicker">VOICEOVER AUTOMATION</p><h3>Voice<span>Sync</span> Studio</h3><p>Place narration precisely into screen recordings.</p></div>
+        </div>
+        <p class="desktop-description">VoiceSync Studio removes manual timing work from narrated video. Import a recording and voiceover, and let VoiceSync find spoken markers, review the proposed timing, then export a synchronized MP4.</p>
+        <div class="desktop-feature-grid">
+          <div class="desktop-feature"><strong>01</strong><h4>Source both files</h4><p>Add a Video file or Screen recording and Add a Voiceover file.</p></div>
+          <div class="desktop-feature"><strong>02</strong><h4>Detect spoken markers</h4><p>Speech recognition identifies spoken timestamps and maps them to the video timeline.</p></div>
+          <div class="desktop-feature"><strong>03</strong><h4>Review every segment</h4><p>Edit timing cells directly, remove false detections, or load example positions.</p></div>
+          <div class="desktop-feature"><strong>04</strong><h4>Export synchronized MP4</h4><p>VoiceSync exports a synchronized finished video.</p></div>
+        </div>
+        <div class="desktop-actions">
+          <a class="button primary" href="https://github.com/pereralabs/VoiceSyncStudio/releases/download/v1.0.0/VoiceSyncStudio-Windows.zip" download>Download Windows app</a>
+          <a class="button apk-download" href="#voicesync-interface">View interface ↓</a>
+        </div>
+        <p class="download-meta">Windows prototype · VoiceSyncStudio.exe · 11.8 MB</p>
+      </div>
+
+      <div id="voicesync-interface" class="desktop-window-wrap" aria-label="Reconstructed VoiceSync Studio interface based on the application source">
+        <div class="desktop-window">
+          <div class="desktop-window-bar"><div class="desktop-brand"><span>PERERA</span><strong>LABS</strong></div><span class="desktop-window-title">VoiceSync Studio | Perera Labs</span><div class="window-controls"><i></i><i></i><i class="close"></i></div></div>
+          <div class="desktop-window-body">
+            <div class="desktop-app-title"><div><p>HEALTH | TECHNOLOGY | INNOVATION</p><h3>VoiceSync Studio</h3><span>Place your narration exactly where it belongs in a screen recording.</span></div><img src="assets/voicesync-logo.png" alt="" aria-hidden="true"></div>
+            <div class="desktop-panel">
+              <div class="desktop-panel-heading"><div><small>SOURCE <b>FILES</b></small><strong>Choose your recording and voiceover</strong></div></div>
+              <div class="desktop-file-row"><span>Video</span><div>screen-recording.mp4</div><button>Browse</button></div>
+              <div class="desktop-file-row"><span>Voiceover</span><div>narration.wav</div><button>Browse</button></div>
+            </div>
+            <div class="desktop-panel desktop-timeline">
+              <div class="desktop-panel-heading"><div><small>NARRATION <b>SEGMENTS</b></small><strong>Review the timeline, then export</strong></div><div class="desktop-panel-actions"><button>Detect spoken markers</button><button class="primary">Export MP4</button></div></div>
+              <div class="desktop-table">
+                <div class="desktop-table-head"><span>VIDEO TIME</span><span>AUDIO START</span><span>AUDIO END</span><span>NOTES</span></div>
+                <div><span>11.0</span><span>6.24</span><span>13.8</span><span>Detected marker; review trim</span></div>
+                <div><span>23.0</span><span>14.72</span><span>21.05</span><span>Detected marker; review trim</span></div>
+                <div><span>34.0</span><span>22.18</span><span>29.64</span><span>Detected marker; review trim</span></div>
+                <div><span>55.0</span><span>31.01</span><span>38.12</span><span>Detected marker; review trim</span></div>
+              </div>
+              <p class="interface-note">Interface reconstruction based on the shipped source UI — not a captured application screenshot.</p>
+            </div>
+          </div>
+          <div class="desktop-status">Detected 4 markers. Double-click cells to correct before export.<span>Log ▴</span></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
         <article class="bento-box bento-hero bento-skycover">
           <div class="card-bg-layer" style="background-image: url('assets/bg_tab_shade.jpg');"></div>
           <div class="card-bg-scrim"></div>
